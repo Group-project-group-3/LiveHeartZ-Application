@@ -1,1 +1,14 @@
-
+.custom-navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 10px 20px; 
+    background-color: #CFCFCF; 
+}
+.custom-navbar .nav-link.active {
+    color:#BC005A;
+ }
+.header1{
+    background-color: black;
+}
