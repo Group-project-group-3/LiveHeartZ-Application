@@ -56,6 +56,27 @@ function Header() {
           </Row>
         </Container>
       </header>
+
+      <Navbar expand="lg" className="custom-navbar">
+        <Container>
+          <Navbar.Brand className="fw-bold" href="#home" style={{ color: '#BC005A' }}>LiveHeartZ</Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="justify-content-between">
+              <Nav.Link className="text-dark fw-bold ms-5" href="#home">Home</Nav.Link>
+              <Nav.Link className="text-dark fw-bold ms-5" href="#link">About Us</Nav.Link>
+              <Nav.Link className="text-dark fw-bold ms-5" href="#link">Blogs</Nav.Link>
+              <Nav.Link className="text-dark fw-bold ms-5" href="#link">Contact Us</Nav.Link>
+              <NavDropdown className="text-dark fw-bold ms-5" title="More" id="basic-nav-dropdown">
+                <NavDropdown.Item className="text-dark fw-bold" href="#action/3.1">Request Blood</NavDropdown.Item>
+                <NavDropdown.Item className="text-dark fw-bold" href="#action/3.2">Find Blood Donor</NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item className="text-dark fw-bold" href="#action/3.4">Register</NavDropdown.Item>
+              </NavDropdown>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
     </div>
   );
 }
