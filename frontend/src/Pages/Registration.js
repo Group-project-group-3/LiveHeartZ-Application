@@ -165,7 +165,13 @@ export default function Registration() {
                 
               />
             </Form.Group>
-            
+            <Button
+              className="submitbtn ps-4 pe-4 fw-bold"
+              type="submit"
+              style={{ backgroundColor: '#BC005A', border: '2px solid white' }}
+            >
+              SUBMIT
+            </Button>
           </Container>
         </div>
       </Container>
