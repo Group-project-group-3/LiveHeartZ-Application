@@ -26,7 +26,13 @@ export default function OtpRegistration(){
                         <Form.Group className="mb-2 mt-2" controlId="formBasicResend">
                         <Form.Label className="h6 p-2">If Not Receive OTP Plz Click On Send OTP Again Button</Form.Label>
                         </Form.Group>
-                        
+                        <Button
+                            className="submitbtn ps-4 pe-4 fw-bold"
+                            type="submit"
+                            style={{ backgroundColor: '#BC005A', border: '2px solid white' }}
+                            >
+                            SEND OTP AGAIN
+                        </Button>
                     </Form>
                 </Container>
             </div>
