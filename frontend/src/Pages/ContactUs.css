@@ -1,0 +1,38 @@
+.form2{
+    padding-left: 7%;
+    padding-right: 7%;
+}
+form .label{
+    font-weight: bold;
+    margin-top: 20px;
+}
+li{
+    list-style: none;
+}
+.list1 li{
+    font-weight: bold;
+    padding-top: 30px;
+}
+.list2 li{
+    font-weight: bold;
+    color: dimgray;
+    padding-top: 30px;
+}
+.list2{
+    padding-bottom: 75px;
+}
+.text1{
+    background-color: rgba(221, 225, 227, 0.45);
+}
+.icon_set {
+    color: #000000; 
+}
+.list3 li{
+    padding-bottom: 20px;
+}
+.list3{
+    margin-top: 30px;
+}
+.text-center{
+    margin-top: 30px;
+}
