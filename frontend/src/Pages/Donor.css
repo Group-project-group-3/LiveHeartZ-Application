@@ -1,0 +1,29 @@
+table{
+    border-collapse: collapse;
+    width: 50%;
+    background-color: lightgray;
+    
+}
+.custom-table th,.custom-table td
+{
+    border:1px solid black;
+
+}
+.id{
+    width: 10%;
+    
+}
+.name{
+    width: 60%;
+    
+}
+.status{
+    width: 30%;
+    
+}
+.table-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
