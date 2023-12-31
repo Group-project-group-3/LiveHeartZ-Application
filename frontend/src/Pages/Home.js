@@ -1,5 +1,7 @@
+import "./Home.css";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
+import { Container, Row, Col, Button, Form, Image } from 'react-bootstrap';
 
 export default function Home(){
     return(
