@@ -68,6 +68,20 @@ export default function Home(){
 
                         </Row>
                 </Container>
+
+                <div className="banner">
+                        <Container className="mt-5 mb-3 ">
+                            <p className="banner-title">Give Blood <br/>Save A LIFE</p>
+                            <br/>
+                            <p className="banner-para ps-6 pe-6">If a consumer of a REST service needs to hard-code all the resource URLs,<br/>then it is tightly then it is loosely coupled. There is no tight. There is no tight<br/> dependency on the URI structure, <br/>as it is specified and used from the response.</p>
+                            <br/>
+                            <div className="text-center">
+                                <Button  className="joinus-button mt-6 ps-4 pe-4 mt-6 mb-2" style={{ backgroundColor: '#000000', color: '#BC005A', border: '2px solid  #BC005A' }}>
+                                    <b className="login2">Join Us</b>
+                                </Button>
+                            </div>
+                        </Container>
+                </div>
             </div>
             <Footer></Footer>
         </div>
