@@ -134,3 +134,31 @@
     -ms-transform: translateX(75%);
     transform: translateX(100%); */
 }
+
+.a-few-min-para{
+    background-color: #BC005A;
+    width: inherit;
+    box-shadow: 0 0 0 100vmax #BC005A;
+    clip-path: inset(0 -100vmax);
+}
+
+.para2{
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 48px;
+    text-align: left;
+    align-items: center;
+    padding: 20px;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.readmore-but {
+    padding-left: 34px;
+    padding-right: 34px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
