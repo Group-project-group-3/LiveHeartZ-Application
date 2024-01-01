@@ -199,6 +199,33 @@ export default function Home(){
                             </Row>
                         </Container>
                 </div>
+
+                <hr className="horizontal"></hr>
+
+                <div className="bestDonor-Main">    
+                        <Container>
+                            <Row>
+                                <Col>
+                                    <Container className="mt-4 ms-2 me-2 mb-3">
+                                        <Image src="./donor6488043-1280-1@2x.png " className="mt-6 ms-6 me-2" style={{ backgroundColor: 'white' , height:'257px', width:'351px'}}></Image>
+                                    </Container>
+                                </Col>
+                                <Col className="mt-6 pt-6">
+                                    <div className="bestDonor">
+                                        <h2 className="bestDonor-heading ">Why should we donate blood...?</h2>
+                                        <p className="bestDonor-para">Donating blood saves lives in medical treatments and emergencies, supporting community well-being. Regular donations are essential due to the short shelf life of blood components. The process is simple and safe, providing health benefits to donors. Blood donation events foster community bonding. This philanthropic act ensures a steady supply, preventing shortages and making a positive impact on lives.</p>
+                                    </div>
+                                    <div className="text-center">
+                                        <Button className="bestDonor-button ps-4 pe-4 mt-1 mb-1" style={{ backgroundColor: '#BC005A', color: '#FFFFFF', border: '2px solid #BC005A' , textAlign: 'center'}}>
+                                            <b className="login2">Be A Donor</b>
+                                        </Button>
+                                    </div>
+                                    
+
+                                </Col>
+                            </Row>
+                        </Container>
+                </div>
                                         
             </div>
             <Footer></Footer>
