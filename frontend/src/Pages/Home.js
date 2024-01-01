@@ -118,6 +118,88 @@ export default function Home(){
                             </Row>
                         </Container>
                 </div>
+
+                <hr className="horizontal"></hr>
+
+                <div>
+                        <Container className="totalBloodDonor">
+                            <h5 className="mt-5" style={{textAlign:"center", fontWeight:"bold"}}>Total Blood Donor Register With Us</h5>
+
+                            <Row className="p-4 m-4 ms-4">
+                                <Col>
+                                    <div className="square">
+                                        <div className="circle">
+                                            <div className="bloodgrp">A-</div>
+                                        </div>
+                                        <p className="squarevalue">270</p>
+                                    </div>
+                                </Col>
+
+                                <Col>
+                                    <div className="square">
+                                        <div className="circle">
+                                            <div className="bloodgrp">A+</div>
+                                        </div>
+                                        <p className="squarevalue">270</p>
+                                    </div>
+                                </Col>
+
+                                <Col>
+                                    <div className="square">
+                                        <div className="circle">
+                                            <div className="bloodgrp">AB-</div>
+                                        </div>
+                                        <p className="squarevalue">270</p>
+                                    </div>
+                                </Col>
+
+                                <Col>
+                                    <div className="square">
+                                        <div className="circle">
+                                            <div className="bloodgrp">AB+</div>
+                                        </div>
+                                        <p className="squarevalue">270</p>
+                                    </div>
+                                </Col>
+                            
+                                <Col>
+                                    <div className="square">
+                                        <div className="circle">
+                                            <div className="bloodgrp">B-</div>
+                                        </div>
+                                        <p className="squarevalue">270</p>
+                                    </div>
+                                </Col>
+
+                                <Col>
+                                    <div className="square">
+                                        <div className="circle">
+                                            <div className="bloodgrp">B+</div>
+                                        </div>
+                                        <p className="squarevalue">270</p>
+                                    </div>
+                                </Col>
+
+                                <Col>
+                                    <div className="square">
+                                        <div className="circle">
+                                            <div className="bloodgrp">O-</div>
+                                        </div>
+                                        <p className="squarevalue">270</p>
+                                    </div>
+                                </Col>
+
+                                <Col>
+                                    <div className="square">
+                                        <div className="circle">
+                                            <div className="bloodgrp">O+</div></div>
+                                        <p className="squarevalue">270</p>
+                                    </div>
+                                </Col>
+                            </Row>
+                        </Container>
+                </div>
+                                        
             </div>
             <Footer></Footer>
         </div>
