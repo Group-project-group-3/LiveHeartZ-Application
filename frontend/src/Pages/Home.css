@@ -111,3 +111,26 @@
     padding-left: 25px;
 }
 
+.bestDonor-Main{
+    text-align: justify;
+}
+
+.bestDonor-heading{
+    margin-top: 30px;
+}
+
+.bestDonor-para{
+    font-size: 16px;
+    line-break: 5px;
+    margin-top: 20px;
+    margin-right: 50px;
+}
+
+.bestDonor-button{
+    text-align: center;
+    display: flex; 
+    justify-content: center;
+    /* align-items: center; 
+    -ms-transform: translateX(75%);
+    transform: translateX(100%); */
+}
