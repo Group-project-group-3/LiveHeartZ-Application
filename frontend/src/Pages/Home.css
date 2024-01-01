@@ -162,3 +162,85 @@
     padding-bottom: 8px;
 }
 
+.liveheartz{
+    font-size: 36px;
+    text-align: center;
+    color: #BC005A;
+    text-shadow: 2px 2px 4px #000000 ;
+    font-family: 'inter';
+}
+
+.liveheartz-helpsomeone{
+    text-align: center;
+    font-size: 20px;
+}
+
+.liveheartz-para{
+    font-size: 16px;
+    text-align: center;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.rounded-images{
+    padding:5px;
+    margin: 10px;
+    display: flex;
+    text-align: center;
+    
+}
+
+.image1{
+    background-color: #D9D9D9;
+    font-size: 40px;
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+    color: #BC005A;
+    border-radius: 100%;
+    text-align: center;
+    
+}
+.image2{
+    padding: 10px;
+    margin: 10px;
+    display: inline-block;
+    background-color: #D9D9D9;
+    border-radius: 100%;
+    text-align: center;
+}
+
+.image3{
+    background-color: #BC005A;
+    border-radius: 100%;
+    display: inline-block;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+.image4{
+    background-color: #BC005A;
+    font-size: 40px;
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+    color: #000000;
+    border-radius: 100%;
+    text-align: center;
+}
+
+.img-3K{
+    text-align: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.img-1K{
+    padding: 30px; 
+}
+
+.p1{
+    text-align: center;
+    font-weight: bold;
+}
