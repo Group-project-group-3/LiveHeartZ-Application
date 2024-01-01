@@ -226,6 +226,21 @@ export default function Home(){
                             </Row>
                         </Container>
                 </div>
+
+                <div>
+                        <Container className="a-few-min-para pb-2 mt-5 mb-3">
+                            <row>
+                                <p className="para2">"A few minutes of your time can give someone a lifetime."</p>
+                                <div className="container my-1 ">
+                                    <div className="readmore-but text-center" >
+                                        <Button className="readmore-button  ps-4 pe-4 mt-1 mb-1" style={{ backgroundColor: '#BC005A', color: '#FFFFFF', border: '2px solid #ffffff' , textAlign: 'center'}}>
+                                        Read more
+                                        </Button>
+                                    </div>
+                                </div> 
+                            </row>
+                        </Container>
+                </div>
                                         
             </div>
             <Footer></Footer>
