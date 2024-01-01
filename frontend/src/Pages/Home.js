@@ -241,6 +241,48 @@ export default function Home(){
                             </row>
                         </Container>
                 </div>
+
+                <hr className="horizontal"></hr>
+
+                <div className="liveheartz-Frame">
+                        <p className="liveheartz">LiveHeartZ</p>
+                        <p className="liveheartz-helpsomeone">Help someone <span>donate blood</span> and save life</p>
+                        <p className="liveheartz-para">If a consumer of a REST service needs to hard-code all the resource URLs, then it is tightly then it is loosely coupled. There is no tight dependency on the URI structure, as it is specified and used from the response. then it is tightly then it is loosely coupled.</p>
+
+                        <Container Container className="rounded-images shadow-xl ms-5 me-5 ps-5 pe-5 mt-5 mb-3">
+                            <div>
+                                <Row className="">
+                                        <Col>
+                                            <Col className="image1  ps-5 pe-5 ms-2">
+                                                <p className="img-3K"><b>3K+</b></p>
+                                            </Col>
+                                            <p className="p1">Registeres</p>
+                                        </Col>
+                                        
+                                        <Col>
+                                            <Col className="image2 ps-5 pe-5 ms-2" >
+                                                <Image src="blooddonation-1@2x.png" className="rounded-circle" ></Image>
+                                            </Col>
+                                            <p className="p1">Be a donor</p>
+                                        </Col>
+                                        
+                                        <Col>
+                                            <Col className="image3 ps-5 pe-5 ms-2">
+                                                <Image src="love-1@2x.png" className="rounded-circle" ></Image>
+                                            </Col>
+                                            <p className="p1">Volunteer</p>
+                                        </Col>
+                                        
+                                        <Col>
+                                            <Col className="image4 rounded-circle ps-5 pe-5 ms-2">
+                                                <p className="img-1K"><b>1K</b></p>
+                                            </Col>
+                                            <p className="p1">Requests</p>
+                                        </Col>
+                                </Row>
+                            </div>
+                        </Container>
+                </div>
                                         
             </div>
             <Footer></Footer>
