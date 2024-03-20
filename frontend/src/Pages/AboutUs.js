@@ -6,6 +6,7 @@ function AboutUs(){
     return(
         <>
             <Header/>
+            <Footer/>
         </>
     )
 }
