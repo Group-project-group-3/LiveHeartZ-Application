@@ -99,6 +99,25 @@ const RequestBlood = () => {
     return Object.keys(errors).length === 0;
   }
 
+  const verifiBloodRequest = async () => {
+    try {
+
+      if (validateFormData()) {
+
+        await axiosPost('finder/bloodrequest', formData);
+
+
+        navigator(`/bloodrequest/otpsend?formdata=${encodeURIComponent(JSON.stringify(formData))}`);
+
+      }
+    } catch (error) {
+      console.log(error);
+      alert("Email alreday exists");
+    }
+
+
+  }
+
   return (
     <div>
       <div>
