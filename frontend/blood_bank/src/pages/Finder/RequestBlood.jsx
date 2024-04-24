@@ -36,7 +36,20 @@ const RequestBlood = () => {
     //console.log(value, name);
     setFormData({ ...formData, [name]: value });
 
+
   }
+
+  const getDistrcts = (e) => {
+
+    Province.map(pr => {
+      if (pr.name === e.target.value) {
+        setDistricts(pr.districts);
+      }
+    }
+    )
+
+  };
+
 
   return (
     <div>
