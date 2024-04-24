@@ -13,6 +13,9 @@ import Button from '@mui/material/Button';
 
 const RequestBlood = () => {
 
+  const navigator = useNavigate();
+
+
   return (
     <div>
       <div>
