@@ -49,7 +49,55 @@ const RequestBlood = () => {
     )
 
   };
+  const validateFormData = () => {
 
+    const errors = {};
+
+    if (!formData.patientname.trim()) {
+      errors.patientname = "Patient name required";
+    }
+    if (!formData.email.trim()) {
+      errors.email = "Email is required"
+    } else if (!/^\S+@\S+\.\S+$/.test(formData.email)) {
+      errors.email = 'Invalid email address';
+    }
+    if (!formData.mobile) {
+      errors.mobile = "Mobile is required"
+    } else if (!/^\d{10}$/.test(formData.mobile)) {
+      errors.mobile = 'Mobile not valid';
+    }
+    if (!formData.doctorname) {
+      errors.doctorname = 'Doctor name is required';
+    }
+    if (!formData.contactname) {
+      errors.contactname = 'Contact name is required';
+    }
+    if (!formData.datewhenneed.trim()) {
+      errors.datewhenneed = 'Date when needed is required';
+    }
+    if (formData.bloodgroup.trim() === "Select") {
+      errors.bloodgroup = 'BloodGroup is required';
+    }
+    if (formData.gender.trim() === "Select") {
+      errors.gender = 'Gender is required';
+    }
+    if (!formData.hospitalname.trim()) {
+      errors.hospitalname = 'Hospital name is required';
+    }
+
+    if (!formData.othermsg.trim()) {
+      errors.othermsg = 'Other msg is required';
+    }
+    if (formData.province.trim() === "Select") {
+      errors.province = 'Province is required';
+    }
+    if (formData.district.trim() === "Select") {
+      errors.district = 'District is required';
+    }
+
+    setErrors(errors);
+    return Object.keys(errors).length === 0;
+  }
 
   return (
     <div>
