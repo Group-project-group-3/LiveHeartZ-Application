@@ -14,6 +14,23 @@ import Button from '@mui/material/Button';
 const RequestBlood = () => {
 
   const navigator = useNavigate();
+  const [errors, setErrors] = useState({});
+  const [districts, setDistricts] = useState([]);
+  const [formData, setFormData] = useState({
+    patientname: '',
+    doctorname: '',
+    bloodgroup: 'Select',
+    hospitalname: '',
+    contactname: '',
+    othermsg: '',
+    email: '',
+    datewhenneed: '',
+    province: 'Select',
+    district: 'Select',
+    mobile: '',
+    gender: 'Select'
+
+  });
 
 
   return (
