@@ -31,7 +31,12 @@ const RequestBlood = () => {
     gender: 'Select'
 
   });
+  const handleChnage = (e) => {
+    const { value, name } = e.target;
+    //console.log(value, name);
+    setFormData({ ...formData, [name]: value });
 
+  }
 
   return (
     <div>
