@@ -38,7 +38,8 @@ const OtpSend = () => {
             await axiosPost(`donor/register/otpsend`, { email: decodedFormData.email });
 
             navigetor(`/register/otpreceive?formdata=${encodeURIComponent(JSON.stringify(decodedFormData))}`);
-        } else {
+        } 
+        else {
             alert("You enterd email not match");
         }
     }
