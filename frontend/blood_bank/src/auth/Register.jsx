@@ -28,6 +28,20 @@ const OtpSend = () => {
         setInputEmail(e.target.value);
 
     }
+
+    
+    const cheakOperations = async () => {
+
+        if (decodedFormData.email === inputemail) {
+
+
+            await axiosPost(`donor/register/otpsend`, { email: decodedFormData.email });
+
+            navigetor(`/register/otpreceive?formdata=${encodeURIComponent(JSON.stringify(decodedFormData))}`);
+        } else {
+            alert("You enterd email not match");
+        }
+    }
 }
 
 export default OtpSend
