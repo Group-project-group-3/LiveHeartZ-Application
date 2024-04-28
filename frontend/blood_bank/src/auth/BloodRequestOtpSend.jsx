@@ -16,6 +16,12 @@ const OtpSend = () => {
 
     const formData = searchParams.get("formdata");
     const decodedFormData = JSON.parse(formData);
+
+    
+    const [inputemail, setInputEmail] = useState(0);
+
+    const navigetor = useNavigate();
+
     return (
         <div className='flex justify-center items-center h-screen bg-stone-100 '>
 
