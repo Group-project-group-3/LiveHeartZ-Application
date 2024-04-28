@@ -29,4 +29,31 @@ export default function Report(props) {
     const handleClose = () => {
         setOpen(false);
     };
+    
+    let [formData, setFormData] = useState({
+        email: props.email,
+        name: props.name,
+        message: '',
+        subject: '',
+        contactname: ''
 
+    });
+
+    const validateFormData = () => {
+
+        const errors = {};
+
+        if (!formData.message.trim()) {
+            errors.fullname = "Please enter message";
+        }
+
+        setErrors(errors);
+        return Object.keys(errors).length === 0;
+    }
+
+    const handleChnage = (e) => {
+
+        const { value, name } = e.target;
+        //console.log(value, name);
+        setFormData({ ...formData, [name]: value });
+    }
