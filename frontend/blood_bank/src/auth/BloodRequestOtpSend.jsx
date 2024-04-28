@@ -21,7 +21,11 @@ const OtpSend = () => {
     const [inputemail, setInputEmail] = useState(0);
 
     const navigetor = useNavigate();
+    const getEmail = (e) => {
 
+        setInputEmail(e.target.value)
+
+    }
     return (
         <div className='flex justify-center items-center h-screen bg-stone-100 '>
 
