@@ -10,8 +10,9 @@ import { axiosPost } from '../AxiosOperations';
 
 const OtpSend = () => {
 
-   
-
+    const location = useLocation();
+    const searchParams = new URLSearchParams(location.search);
+    
     return (
         <div className='flex justify-center items-center h-screen bg-stone-100 '>
 
