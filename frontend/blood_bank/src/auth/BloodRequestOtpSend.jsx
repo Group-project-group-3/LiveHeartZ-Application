@@ -26,6 +26,23 @@ const OtpSend = () => {
         setInputEmail(e.target.value)
 
     }
+
+    const cheakOperations = async () => {
+
+        if (decodedFormData.email === inputemail) {
+
+
+            await axiosPost(`donor/bloodrequest/otpsend`, { email: decodedFormData.email });
+          
+
+            navigetor(`/bloodrequest/otpreceive?formdata=${encodeURIComponent(JSON.stringify(decodedFormData))}`);
+        } else {
+            
+            alert("You enterd email not match");
+        }
+   
+    }
+    
     return (
         <div className='flex justify-center items-center h-screen bg-stone-100 '>
 
