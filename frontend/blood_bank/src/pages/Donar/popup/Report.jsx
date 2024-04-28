@@ -33,8 +33,8 @@ export default function Report(props) {
     let [formData, setFormData] = useState({
         email: props.email,
         name: props.name,
-        message: '',
-        subject: '',
+        message: props.message,
+        subject: props.subject,
         contactname: ''
 
     });
