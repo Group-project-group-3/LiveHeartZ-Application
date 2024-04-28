@@ -12,7 +12,10 @@ const OtpSend = () => {
 
     const location = useLocation();
     const searchParams = new URLSearchParams(location.search);
-    
+
+
+    const formData = searchParams.get("formdata");
+    const decodedFormData = JSON.parse(formData);
     return (
         <div className='flex justify-center items-center h-screen bg-stone-100 '>
 
