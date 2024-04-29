@@ -10,6 +10,17 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 const OtpSend = () => {
+    const location = useLocation();
+    const searchParams = new URLSearchParams(location.search);
+    const formdata = searchParams.get("formdata");
+
+
+    var decodedFormData = JSON.parse(formdata);
+
+
+    const [inputemail, setInputEmail] = useState(0);
+
+    const navigetor = useNavigate();
 
     return (
        
