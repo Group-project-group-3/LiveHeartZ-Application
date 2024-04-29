@@ -12,6 +12,8 @@ const OtpReceive = () => {
   const formdata = searchParams.get("formdata");
 
   const [otp, setOtp] = useState(null);
+  var decodedFormData = JSON.parse(formdata);
+
 
   return (
     <div className='flex justify-center items-center h-screen bg-stone-100 '>
