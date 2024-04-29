@@ -14,9 +14,7 @@ const OtpSend = () => {
     const searchParams = new URLSearchParams(location.search);
     const formdata = searchParams.get("formdata");
 
-
     var decodedFormData = JSON.parse(formdata);
-
 
     const [inputemail, setInputEmail] = useState(0);
 
@@ -25,8 +23,21 @@ const OtpSend = () => {
     const getEmail = (e) => {
 
         setInputEmail(e.target.value);
-
     }
+
+    const cheakOperations = async () => {
+
+        if (decodedFormData.email === inputemail) {
+
+
+            await axiosPost(`donor/register/otpsend`, { email: decodedFormData.email });
+
+            navigetor(`/register/otpreceive?formdata=${encodeURIComponent(JSON.stringify(decodedFormData))}`);
+        } else {
+            alert("You enterd email not match");
+        }
+    }
+    
     return (
         <div className='flex justify-center items-center h-screen bg-stone-100 '>
 
@@ -51,11 +62,9 @@ const OtpSend = () => {
 
                     </div>
 
-
                 </div>
 
             </div>
-
 
         </div>
     )
