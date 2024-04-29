@@ -15,6 +15,12 @@ const OtpReceive = () => {
   var decodedFormData = JSON.parse(formdata);
   const navigetor = useNavigate();
 
+  const getOtp = (e) => {
+
+    setOtp(e.target.value);
+
+  }
+
   return (
     <div className='flex justify-center items-center h-screen bg-stone-100 '>
 
