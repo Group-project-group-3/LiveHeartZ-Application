@@ -13,6 +13,7 @@ const OtpReceive = () => {
 
   const [otp, setOtp] = useState(null);
   var decodedFormData = JSON.parse(formdata);
+
   const navigetor = useNavigate();
 
   const getOtp = (e) => {
