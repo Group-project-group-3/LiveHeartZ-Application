@@ -7,7 +7,9 @@ import { axiosPost } from '../AxiosOperations';
 import { useNavigate } from 'react-router-dom';
 const OtpReceive = () => {
 
-
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const formdata = searchParams.get("formdata");
 
   return (
     <div className='flex justify-center items-center h-screen bg-stone-100 '>
