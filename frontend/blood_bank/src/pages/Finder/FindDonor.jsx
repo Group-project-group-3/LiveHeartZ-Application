@@ -25,3 +25,23 @@ const FindDonor = () => {
   const verify = searchParams.get("verify");
   const requesterData = searchParams.get("data");
   var decodedFormData = JSON.parse(requesterData);
+
+  useEffect(() => {
+
+    if (verify == "true") {
+      setVerifyUser(true);
+    }
+
+
+    return () => {
+      // Cleanup code goes here
+    };
+  }, []);
+
+
+  const [districts, setDistricts] = useState([]);
+  const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(true);
+  const [donorList, setDonorList] = useState([]);
+  const [chatVisible, setChatVisible] = useState(false);
+  const [available, setAvailable] = useState(false);
