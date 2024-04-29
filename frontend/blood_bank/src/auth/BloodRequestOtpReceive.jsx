@@ -21,6 +21,25 @@ const OtpReceive = () => {
 
   }
 
+  const registerDonor = async () => {
+
+    try {
+
+
+      await axiosPost('donor/bloodrequest/otpreceive', { email: decodedFormData.email, otp: otp });
+
+      navigetor(`/finddonor/?verify=${encodeURIComponent(true)}&data=${encodeURIComponent(formdata)}`);
+
+
+
+
+    } catch (error) {
+
+
+      alert(error.response.data.message)
+    }
+  }
+
   return (
     <div className='flex justify-center items-center h-screen bg-stone-100 '>
 
