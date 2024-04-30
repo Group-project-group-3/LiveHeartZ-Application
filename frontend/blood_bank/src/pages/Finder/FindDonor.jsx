@@ -45,3 +45,26 @@ const FindDonor = () => {
   const [donorList, setDonorList] = useState([]);
   const [chatVisible, setChatVisible] = useState(false);
   const [available, setAvailable] = useState(false);
+
+  const [formData, setFormData] = useState({
+    bloodgroup: 'Select',
+    province: 'Select',
+    district: 'Select',
+  });
+
+  const bloodbankCheck = () => {
+    try {
+      axiosGet(`home/bloodbank/availability/${formData.bloodgroup}`).then((data) => {
+        if (formData.district == "Vavuniya" & data.data.available & verifyuser) {
+          setAvailable(true);
+        } else {
+          setAvailable(false);
+        }
+
+      });
+
+
+    } catch (error) {
+
+    }
+  }
