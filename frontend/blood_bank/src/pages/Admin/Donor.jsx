@@ -8,6 +8,11 @@ import Spinner1 from '../../pages/spinners/Spinner1';
 const Donor = () => {
     const [donordata, setDonorData] = useState([]);
     const [loading, setLoading] = useState(true);
+
+    useEffect(() => { 
+
+        
+    }, []);
 }
 
 export default Donor
