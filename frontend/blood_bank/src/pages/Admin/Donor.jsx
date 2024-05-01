@@ -10,8 +10,9 @@ const Donor = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => { 
+        axiosGet('donor/alldonors')
 
-        
+
     }, []);
 }
 
