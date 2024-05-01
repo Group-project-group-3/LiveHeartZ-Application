@@ -11,7 +11,9 @@ const Donor = () => {
 
     useEffect(() => { 
         axiosGet('donor/alldonors')
-
+        .then(data=>{
+            
+        }).
 
     }, []);
 }
