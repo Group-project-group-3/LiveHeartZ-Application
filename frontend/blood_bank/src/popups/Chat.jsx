@@ -22,3 +22,29 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
         padding: theme.spacing(1),
     },
 }));
+
+export default function Chat(props) {
+    const [open, setOpen] = React.useState(false);
+
+    const handleClickOpen = () => {
+        setOpen(true);
+    };
+    const handleClose = () => {
+        setOpen(false);
+    };
+
+
+
+    const [profile, setProfile] = useState({});
+
+    const [notifications, setNotifications] = useState([]);
+    const [errors, setErrors] = useState({});
+
+    let [formData, setFormData] = useState({
+        reciver_id: props.id,
+        message: '',
+        subject: '',
+        sendername: ''
+
+    });
+}

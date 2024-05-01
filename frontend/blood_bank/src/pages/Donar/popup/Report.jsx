@@ -57,3 +57,28 @@ export default function Report(props) {
         //console.log(value, name);
         setFormData({ ...formData, [name]: value });
     }
+
+    const sendReport = () => {
+
+        if (validateFormData) {
+            axiosPost('report/setreport', JSON.stringify(formData));
+            alert("Report Send Succsessfully");
+
+            handleClose();
+        }
+
+
+    }
+
+    return (
+        <React.Fragment >
+            <Button variant="outlined" className='w-full ' color="error" onClick={handleClickOpen}>
+                REPORT
+            </Button>
+            <BootstrapDialog
+                onClose={handleClose}
+                aria-labelledby="customized-dialog-title"
+                open={open}
+                >
+                )
+
