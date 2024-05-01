@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState} from 'React';
 import { Link, json } from "react-router-dom"; // Assuming you're using React Router for navigation
 import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
