@@ -18,7 +18,32 @@ const Requests = () => {
   const searchParams = new URLSearchParams(location.search);
   const blood = searchParams.get("blood");
 
+   useEffect(() => {
 
+    axiosGet(`finder/requests/${blood}`)
+
+      .then(data => {
+
+        setData(data.data);
+
+      })
+      .catch(error => {
+
+        console.error('Error fetching data:', error);
+      });
+
+
+    return () => {
+      // Cleanup code goes here
+    };
+  }, []);
+
+
+  const addReport = (id) => {
+    setReport(true);
+  }
+
+  
   return (
     <div >
       <div>
