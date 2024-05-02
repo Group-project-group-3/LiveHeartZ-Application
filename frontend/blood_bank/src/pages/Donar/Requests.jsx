@@ -43,6 +43,61 @@ const Requests = () => {
     setReport(true);
   }
 
+  const columns = [
+    {
+      title: 'Patient Name',
+      dataIndex: 'patientname',
+      key: '1',
+    },
+    {
+      title: 'Gender',
+      dataIndex: 'gender',
+      key: 'gender',
+    },
+    {
+      title: 'Doctor Name',
+      dataIndex: 'doctorname',
+      key: 'doctorname',
+    },
+    {
+      title: 'Blood Group',
+      dataIndex: 'bloodgroup',
+      key: 'bloodgroup',
+    },
+    {
+      title: 'When Need',
+      dataIndex: 'datewhenneed',
+      key: 'datewhenneed',
+      render: (text) => <div style={{ color: 'red', fontWeight: 'bold' }}>{text}</div>
+    },
+    {
+      title: 'Hospital Name',
+      dataIndex: 'hospitalname',
+      key: 'hospitalname',
+    },
+    {
+      title: 'Contact Name',
+      dataIndex: 'contactname',
+      key: 'contactname',
+    },
+    {
+      title: 'Mobile',
+      dataIndex: 'mobile',
+      key: 'mobile',
+    },
+    {
+      title: 'Email',
+      dataIndex: 'email',
+      key: 'email',
+      render: (text) => <a href={`mailto:${text}`} style={{ color: 'blue', textDecoration: 'underline', cursor: 'pointer' }}>{text}</a>,
+    },
+    {
+      title: 'District',
+      dataIndex: 'district',
+      key: 'district',
+    }
+  ];
+
   
   return (
     <div >
