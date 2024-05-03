@@ -14,7 +14,7 @@ const Donor = () => {
         .then(data=>{
             setDonorData(data.data);
         }).then(setInterval(() => {
-            
+            setLoading(false);
         },350))
 
     }, []);
