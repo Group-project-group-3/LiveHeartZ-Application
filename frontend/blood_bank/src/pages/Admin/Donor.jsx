@@ -17,7 +17,10 @@ const Donor = () => {
             setLoading(false);
         },350))
 
-        .catch(error => {});
+        .catch(error => {
+
+            console.error('Error fetching data:', error);
+        });
 
     }, []);
 }
