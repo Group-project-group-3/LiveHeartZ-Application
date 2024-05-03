@@ -27,6 +27,10 @@ const Donor = () => {
           };
 
     }, []);
+
+    const columns = [
+        
+    ];
 }
 
 export default Donor
