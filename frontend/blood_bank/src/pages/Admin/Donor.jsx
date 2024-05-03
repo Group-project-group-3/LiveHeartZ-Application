@@ -22,6 +22,10 @@ const Donor = () => {
             console.error('Error fetching data:', error);
         });
 
+        return () => {
+            // Cleanup code goes here
+          };
+
     }, []);
 }
 
