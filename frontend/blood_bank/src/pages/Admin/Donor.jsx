@@ -17,6 +17,8 @@ const Donor = () => {
             setLoading(false);
         },350))
 
+        .catch(error => {});
+
     }, []);
 }
 
