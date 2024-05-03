@@ -29,7 +29,11 @@ const Donor = () => {
     }, []);
 
     const columns = [
-        
+        {
+            title: 'Name',
+            dataIndex: 'fullname',
+            key: 'count',
+          },
     ];
 }
 
