@@ -13,7 +13,9 @@ const Donor = () => {
         axiosGet('donor/alldonors')
         .then(data=>{
             setDonorData(data.data);
-        }).
+        }).then(setInterval(() => {
+            
+        },350))
 
     }, []);
 }
