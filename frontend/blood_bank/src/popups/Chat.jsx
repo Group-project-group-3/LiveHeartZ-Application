@@ -42,11 +42,10 @@ export default function Chat(props) {
 
     let [formData, setFormData] = useState({
         reciver_id: props.id,
-        message: '',
-        subject: '',
-        sendername: ''
-
-    });
+        message: props.message,
+        subject:props.subject,
+        sendername:props.sendername
+        });
 
     const validateFrom Data() = () =>{
         
