@@ -68,3 +68,69 @@ const FindDonor = () => {
 
     }
   }
+
+  const handleChnage = (e) => {
+    const { value, name } = e.target;
+    setFormData({ ...formData, [name]: value });
+
+  };
+
+  const getDistrcts = (e) => {
+
+    Province.map(pr => {
+      if (pr.name === e.target.value) {
+        setDistricts(pr.districts);
+      }
+    }
+    )
+
+  };
+
+  const sendMail = async (id) => {
+
+    try {
+      await axiosPost('donor/sendemail', { data: decodedFormData, receiverId: id }).then(alert("Email Send Succsessfully"));
+
+
+    } catch (error) {
+      console.log(error)
+    }
+
+  };
+
+
+  const validateFormData = () => {
+    const errors = {};
+    if (formData.bloodgroup.trim() === "Select") {
+      errors.bloodgroup = 'BloodGroup is required';
+    }
+    if (formData.province.trim() === "Select") {
+      errors.province = 'Province is required';
+    }
+    if (formData.district.trim() === "Select") {
+      errors.district = 'District is required';
+    }
+    setErrors(errors);
+    return Object.keys(errors).length === 0;
+  };
+
+  const getDonorsList = async () => {
+    if (validateFormData()) {
+      await axiosGet(`donor/finddonor/${formData.bloodgroup}/${formData.province}/${formData.district}`)
+        .then(data => {
+          bloodbankCheck();
+          setDonorList(data.data);
+        }).then(setInterval(() => {
+          setLoading(false);
+        }, 500))
+        .then(() => {
+          // Show chat after fetching donor list
+          setChatVisible(true);
+        });
+    }
+  };
+
+  const openReportBox = () => {
+
+  }
+
