@@ -58,15 +58,12 @@ export default function Report(props) {
     }
 
     const sendReport = () => {
-
         if (validateFormData) {
             axiosPost('report/setreport', JSON.stringify(formData));
             alert("Report Send Succsessfully");
 
             handleClose();
         }
-
-
     }
 
     return (
@@ -127,7 +124,6 @@ export default function Report(props) {
                         />
                         </div>
                     </div>
-
                     <div>
                         <div className='homepara w-[100px] h-[40px] mt-[5px]'>
                         <label>Message : </label>
@@ -145,13 +141,14 @@ export default function Report(props) {
                         ></textarea>
                         </div>
                     </div>
-
                     </DialogContent>
+                
                         <DialogActions>
-                        <Button variant="outlined" style={{ backgroundColor: '#BC005A', border: '2px solid white',color: 'white' }} >SEND</Button>
+                        <Button variant="outlined" style={{ backgroundColor: '#BC005A', border: '2px solid white',color: 'white' }} onClick={sendReport} >SEND</Button>
                         </DialogaActions>
 
                             </BootstrapDialog>
                         </React.Fragment>    
                 );
+}
 
