@@ -30,7 +30,7 @@ export default function Chat(props) {
         setOpen(true);
     };
     const handleClose = () => {
-        setOpen(true);
+        setOpen(false);
     };
 
 
