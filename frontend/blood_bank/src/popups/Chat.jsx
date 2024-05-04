@@ -47,4 +47,8 @@ export default function Chat(props) {
         sendername: ''
 
     });
+
+    const validateFrom Data() = () =>{
+        
+    }
 }
