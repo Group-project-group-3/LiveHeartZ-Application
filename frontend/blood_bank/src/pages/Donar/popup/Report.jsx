@@ -115,11 +115,11 @@ export default function Report(props) {
                         </div>
                     </div>
                     </DialogContent>
+                        <DialogActions>
+                        <Button variant="outlined" style={{ backgroundColor: '#BC005A', border: '2px solid white',color: 'white' }} >SEND</Button>
+                        </DialogaActions>
 
                 </BootstrapDialog>
-                    <DialogActions>
-                        <Button variant="outlined" style={{ backgroundColor: '#BC005A', border: '2px solid white',color: 'white' }} >SEND</Button>
-                    </DialogaActions>
             </React.Fragment>
 
                     
