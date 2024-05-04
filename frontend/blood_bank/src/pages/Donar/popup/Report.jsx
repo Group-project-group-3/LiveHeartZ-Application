@@ -80,5 +80,39 @@ export default function Report(props) {
                 aria-labelledby="customized-dialog-title"
                 open={open}
                 >
+
+        <DialogTitle sx={{ m: 0, p: 2 }} id="customized-dialog-title">
+                    <div className='homepara font-bold text-red-600'>Report - {props.name}</div>
+                </DialogTitle>
+                <hr className='border-2 m-[15px]' />
+                <IconButton
+                    aria-label="close"
+                    onClick={handleClose}
+                    sx={{
+                        position: 'absolute',
+                        right: 8,
+                        top: 8,
+                        color: 'red',
+                    }}
+                >
+                    <CloseIcon />
+                </IconButton>
+
+                <DialogContent className='row-span-1'>
+                    <div className='flex'>
+                        <div className='homepara w-[100px] h-[40px] mt-[5px]'>
+                        <label>Name: </label>
+                        </div>
+                        <div className='w-full'>
+                        <input
+                            type="text"
+                            name='contactname'
+                            className='border-2 w-full h-[40px]'
+                            onChange={handleChnage}
+                            value={formData.sendername}
+                            required
+                        />
+                        </div>
+                    </div>
                 )
 
