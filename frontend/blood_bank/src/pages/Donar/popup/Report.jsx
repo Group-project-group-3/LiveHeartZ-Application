@@ -114,14 +114,45 @@ export default function Report(props) {
                         />
                         </div>
                     </div>
+                         <div className='flex'>
+                        <div className='homepara w-[100px] h-[40px] mt-[5px]'>
+                        <label>Subject : </label>
+                        </div>
+                        <div className='w-full'>
+                        <input
+                            type="text"
+                            name='subject'
+                            className='border-2 w-full h-[40px]'
+                            onChange={handleChnage}
+                            value={formData.subject}
+                        />
+                        </div>
+                    </div>
+
+                    <div>
+                        <div className='homepara w-[100px] h-[40px] mt-[5px]'>
+                        <label>Message : </label>
+                        </div>
+                        <div className='w-full'>
+                        <textarea
+                            name="message"
+                            onChange={handleChnage}
+                            value={formData.message}
+                            placeholder='Enter Report Message Here'
+                            required
+                            cols="60"
+                            rows="5"
+                            className='border-2'
+                        ></textarea>
+                        </div>
+                    </div>
+
                     </DialogContent>
                         <DialogActions>
                         <Button variant="outlined" style={{ backgroundColor: '#BC005A', border: '2px solid white',color: 'white' }} >SEND</Button>
                         </DialogaActions>
 
-                </BootstrapDialog>
-            </React.Fragment>
-
-                    
-                )
+                            </BootstrapDialog>
+                        </React.Fragment>    
+                );
 
