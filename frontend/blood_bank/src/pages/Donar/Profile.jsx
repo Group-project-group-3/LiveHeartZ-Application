@@ -21,6 +21,20 @@ const Profile = () => {
   const searchParams = new URLSearchParams(location.search);
   const id = searchParams.get("id");
 
+    useEffect(() => {
+
+    axiosGet(`donor/byid/${id}`)
+
+      .then(data => {
+
+        setProfile(data.data);
+
+      })
+      .catch(error => {
+
+        console.error('Error fetching data:', error);
+      });
+
     return () => {
       // Cleanup code goes here
     };
