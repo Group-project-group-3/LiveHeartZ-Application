@@ -13,6 +13,20 @@ import Stack from '@mui/material/Stack';
 
 
 const Profile = () => {
+
+  
+  const [profile, setProfile] = useState([]);
+
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const id = searchParams.get("id");
+
+    return () => {
+      // Cleanup code goes here
+    };
+  }, []);
+
+  
   return (
     <div >
       <div>
