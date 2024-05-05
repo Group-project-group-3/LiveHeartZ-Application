@@ -175,6 +175,49 @@ const FindDonor = () => {
               {errors.province && <span className="text-red-500">{errors.province}</span>}
             </div>
 
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-[5px]">
+                Province
+              </label>
+              <select name="province" onChange={(e) => {
+                handleChnage(e); getDistrcts(e);
+              }} className='w-full h-[40px] bg-slate-100'>
+                <option value="Select">Select</option>
+                {
+                  Province.map((province) =>
+                    <option value={province.name}>{province.name}</option>
+                  )
+                }
+              </select>
+              {errors.province && <span className="text-red-500">{errors.province}</span>}
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-[5px]">
+                District
+              </label>
+              <select name="district" onChange={handleChnage} className='w-full h-[40px] bg-slate-100'>
+                <option value="Select">Select</option>
+                {
+
+                  districts.map(dis =>
+                    <option value={dis}>{dis}</option>
+                  )
+
+                }
+              </select>
+              {errors.district && <span className="text-red-500">{errors.district}</span>}
+            </div>
+            <div className='flex'>
+              <Stack direction="row" spacing={2}>
+                
+                <Button variant="outlined" style={{ color: '#BC005A', border: '2px solid #BC005A' }} onClick={getDonorsList} >FIND DONARS</Button>
+              </Stack>
+            </div>
+          </div>
+        </form>
+      </div>
+
             
    
   );
