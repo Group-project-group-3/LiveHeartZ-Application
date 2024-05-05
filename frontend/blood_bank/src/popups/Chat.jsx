@@ -47,7 +47,62 @@ export default function Chat(props) {
         sendername:''
         });
 
-    const validateFrom Data() = () =>{
-        
+    const validateFormData = () => {
+
+        const errors = {};
+
+        if (!formData.message.trim()) {
+            errors.fullname = "Please enter message";
+        }
+
+        setErrors(errors);
+        return Object.keys(errors).length === 0;
     }
+
+    const handleChnage = (e) => {
+
+        const { value, name } = e.target;
+        //console.log(value, name);
+        setFormData({ ...formData, [name]: value });
+
+
+    }
+    const sendMessage = () => {
+
+
+        axiosPost('donor/notification', JSON.stringify(formData));
+        alert("Message Send Succsessfully");
+
+        handleClose();
+    }
+
+    return (
+         <React.Fragment >
+            <Button variant="outlined" className='w-full' onClick={handleClickOpen}>
+                Chat
+            </Button>
+            <BootstrapDialog
+                onClose={handleClose}
+                aria-labelledby="customized-dialog-title"
+                open={open}
+            >
+
+            <DialogTitle sx={{ m: 0, p: 2 }} id="customized-dialog-title">
+                    <div className='homepara font-bold'>Chat With - {props.name}</div>
+                </DialogTitle>
+                <hr className='border-2 m-[15px]' />
+                <IconButton
+                    aria-label="close"
+                    onClick={handleClose}
+                    sx={{
+                        position: 'absolute',
+                        right: 8,
+                        top: 8,
+                        color:'red',
+                    }}
+                >
+                    <CloseIcon />
+                </IconButton>
+        
+    );  
 }
