@@ -28,9 +28,9 @@ const FindDonor = () => {
   var decodedFormData = JSON.parse(requesterData);//It attempts to parse the value of the "data" query parameter as JSON. requesterData is the value retrieved from the URL.
 
 
-
+//This part of the code is utilizing the useEffect hook
+  //and if the URL parameter "verify" is set to "true", it updates the verifyuser state variable to true
 useEffect(() => {
-
     if (verify == "true") {
       setVerifyUser(true);
     }
