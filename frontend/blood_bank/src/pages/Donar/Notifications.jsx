@@ -14,7 +14,24 @@ const Notifications = () => {
   const searchParams = new URLSearchParams(location.search);
   const id = searchParams.get("id");
   
-  return () => {
+  const [notifications, setNotifications] = useState([]);
+
+  useEffect(() => {
+
+    axiosGet(`donor/notification/${id}`)
+
+      .then(data => {
+
+        setNotifications(data.data);
+
+      })
+      .catch(error => {
+
+        console.error('Error fetching data:', error);
+      });
+
+
+    return () => {
       // Cleanup code goes here
     };
   }, []);
