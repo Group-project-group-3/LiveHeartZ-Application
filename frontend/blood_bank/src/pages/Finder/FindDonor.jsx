@@ -85,6 +85,7 @@ useEffect(() => {
 
   };
 
+  //This getDistricts function seems to be designed to get the districts corresponding to the selected province.
   const getDistrcts = (e) => {
 
     Province.map(pr => {
