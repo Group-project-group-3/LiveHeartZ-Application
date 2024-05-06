@@ -6,8 +6,12 @@ import Spinner1 from '../../pages/spinners/Spinner1';
 import { WarningOutlined } from '@ant-design/icons';
 
 const Report = () => {
-    const [reports, setReports] = useState([]);
-  const [loading, setLoading] = useState(true);
+const [reports, setReports] = useState([]);
+const [loading, setLoading] = useState(true);
+
+const deleteDonor = async (email) => {
+    
+}
 }
 
 export default Report
