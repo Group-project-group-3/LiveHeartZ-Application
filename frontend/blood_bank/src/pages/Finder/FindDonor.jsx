@@ -42,7 +42,8 @@ useEffect(() => {
     };
   }, []);
 
-  
+
+  //This code sets up various pieces of information that a React component might need:
   const [districts, setDistricts] = useState([]);
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(true);
