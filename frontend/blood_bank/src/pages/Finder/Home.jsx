@@ -136,6 +136,110 @@ return (
             is given to many whose situation may otherwise be hopeless.
             Blood donors give such patients a second chance of life.</p>
         </div>
+
+        <div className='mt-[50px] w-[500px] flex justify-evenly pb-[20px] bg-gray-200'>
+          <form>
+            <div className='flex justify-center pt-[30px] font-bold font-[20px]'>
+              Search Blood
+            </div>
+            <div className='mt-[20px]'>
+              <Box sx={{ minWidth: 220 }}>
+                <FormControl fullWidth>
+                  <InputLabel id="demo-simple-select-label">Select Blood Group</InputLabel>
+                  <Select
+                    labelId="demo-simple-select-label"
+                    
+                    style={{ background: 'white' }}
+                    
+
+                    id='bloodgroup-select'
+                    value={formData.bloodgroup}
+                    label='Select Blood'
+                    onChange={handleBloodGroupChange}
+
+                  >
+                    <MenuItem value='Select'>Blood Group</MenuItem>
+                    <MenuItem value='A-'>A-</MenuItem>
+                    <MenuItem value='A+'>A+</MenuItem>
+                    <MenuItem value='AB-'>AB-</MenuItem>
+                    <MenuItem value='AB+'>AB+</MenuItem>
+                    <MenuItem value='B-'>B-</MenuItem>
+                    <MenuItem value='B+'>B+</MenuItem>
+                    <MenuItem value='O-'>O-</MenuItem>
+                    <MenuItem value='O+'>O+</MenuItem>
+                  </Select>
+                </FormControl>
+              </Box>
+            </div>
+            <div className='mt-[20px]'>
+              <Box sx={{ minWidth: 220 }}>
+                <FormControl fullWidth>
+                  <InputLabel id="demo-simple-select-label">Select Province</InputLabel>
+                  <Select
+                    labelId="demo-simple-select-label"
+                    
+                    style={{ background: 'white' }}
+                  
+                    
+                    id='province-select'
+                    value={formData.province}
+                    label='Select Province'
+                    onChange={handleProvinceChange}
+
+                  >
+                    <MenuItem value='Select'>Province</MenuItem>
+                    {Province.map((province) => (
+                      <MenuItem key={province.name} value={province.name}>
+                        {province.name}
+                      </MenuItem>
+                    ))}
+                  </Select>
+                </FormControl>
+              </Box>
+            </div>
+            <div className='mt-[20px]'>
+              <Box sx={{ minWidth: 220 }}>
+                <FormControl fullWidth>
+                  <InputLabel id="demo-simple-select-label">Select District</InputLabel>
+                  <Select
+                    labelId="demo-simple-select-label"
+                    
+                    inputProps={{ className: 'bg-white' }}
+                    label="Select District"
+                    style={{ background: 'white' }}
+      
+                    id='district-select'
+                    value={formData.district}
+                    
+                    onChange={handleDistrictChange}
+                  >
+                    <MenuItem value='Select'>District</MenuItem>
+                    {district.map((dis) => (
+                      <MenuItem key={dis} value={dis}>
+                        {dis}
+                      </MenuItem>
+                    ))}
+                  </Select>
+                </FormControl>
+              </Box>
+            </div>
+            <div className='flex justify-center mt-[20px]'>
+              <Stack direction="row" spacing={2}>
+                
+                <Button variant='outlined' style={{ color: '#BC005A', border: '2px solid #BC005A' }} onClick={() => {
+                  if (formData.bloodgroup != 'Select' && formData.province != 'Select') {
+                    navigetor(`/search?data=${encodeURIComponent(JSON.stringify(formData))}`)
+                  } else {
+                    alert("Please Select All Feilds");
+                  }
+                }}>
+                  Find Blood
+                </Button>
+              </Stack>
+            </div>
+          </form>
+        </div>
+        
       </div>
       
       <div className='mt-10'>
