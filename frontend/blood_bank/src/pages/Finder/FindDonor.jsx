@@ -26,11 +26,7 @@ const FindDonor = () => {
   const requesterData = searchParams.get("data");
   var decodedFormData = JSON.parse(requesterData);
 
-  useEffect(() => {
-
-    if (verify == "true") {
-      setVerifyUser(true);
-    }
+  
 
 
    
