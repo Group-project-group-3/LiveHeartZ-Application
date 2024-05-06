@@ -60,10 +60,22 @@ const deleteDonor = async (email) => {
         
                 return <>
                 <div key={recode.key} className='flex gap-7 '></div>
+                <Button  className='text-white' style={{ backgroundColor: '#BC005A', border: '2px solid white' }} onClick={() => deleteDonor(row._id)} >DELETE</Button>
                 </>
-    
+            }
         }
     ];
+
+    return (
+        <div className='grid grid-cols-1 p-[30px] '>
+             <center className='homepara font-bold text-[26px]'>Donor List</center>
+             {
+            loading ? (<Spinner1 />) : (<div className='bg-slate-400 m-[50px]'>
+            <Table columns={columns} dataSource={reports} />
+             </div>)
+            }     
+        </div>
+    )
 }
 
 export default Report
