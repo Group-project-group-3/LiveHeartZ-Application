@@ -334,6 +334,13 @@ return (
             </div>
 
       </div>
+
+      <div className='w-[full] h-[150px] bg-pink-800 m-7 flex flex-col items-center justify-center'>
+        <h1 className='font-bold text-[35px] p-4 text-white text-center'>
+          “A few minutes of your time can give someone a lifetime.”
+        </h1>
+        <Button variant="outlined" component={Link} to={"/register"} style={{ color: 'white', border: '2px solid white' }}>REGISTER</Button>
+      </div>
       
       <div className='mt-10'>
         <Footer navLinks1={socialLinks} navLinks2={contactData} />
