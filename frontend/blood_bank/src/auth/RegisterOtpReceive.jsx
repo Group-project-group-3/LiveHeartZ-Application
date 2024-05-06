@@ -28,12 +28,12 @@ const OtpReceive = () => {
 
         <div className='w-full h-[300px] bg-slate-200 mt-[25px] p-[25px] border-2'>
           <center className='font-sans mb-[10px]'>Enter Otp</center>
-          <center className='font-sans mb-[10px] '><input type='text' onChange={getOtp} className='w-[250px]' ></input></center>
+          <center className='font-sans mb-[10px] '><input type='text' onChange={} className='w-[250px]' ></input></center>
 
-          <center className='mb-[50px] '> <Button variant="contained" color="success" onClick={registerDonor}>Submit</Button></center>
+          <center className='mb-[50px] '> <Button variant="contained" color="success" onClick={}>Submit</Button></center>
 
           <center className='homepara mb-[10px]' >I Not Recive Otp Please Sen Agin</center>
-          <center > <Button variant="contained" endIcon={<SendIcon />}>
+          <center > <Button variant="contained" endIcon={}>
             Send
           </Button></center>
         </div>
