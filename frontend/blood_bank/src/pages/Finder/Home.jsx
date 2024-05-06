@@ -50,6 +50,17 @@ const Home = () => {
   const handleDistrictChange = (event) => {
     setFormData({ ...formData, district: event.target.value });
   };
+
+  const getDistricts = () => {
+
+    Province.map((pro) => {
+      if (pro.name == formData.province) {
+        setDistrict(pro.districts);
+      }
+    })
+
+
+  }
 }
 
 export default Home
