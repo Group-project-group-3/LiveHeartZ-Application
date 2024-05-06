@@ -125,6 +125,19 @@ return (
       <div>
         <Header navLinks={navLinks} />
       </div>
+      
+      <div className='flex justify-evenly   p-[20px] '>
+        <div className='mt-[50px] w-[750px] p-[20px] '>
+          <h1 className='text-pink-600 text-[50px] font-bold h1Text'>Donate Blood,</h1>
+          <h1 className='text-pink-600 text-[50px] h1Text'>Give the</h1>
+          <h1 className='text-pink-600 text-[50px] h1Text'>Gift of</h1>
+          <h1 className='text-pink-600 text-[50px] h1Text'>Life.</h1>
+          <p className='text-[20px] homepara'> By donating blood with LiveHeartZ, many lives are saved and hope
+            is given to many whose situation may otherwise be hopeless.
+            Blood donors give such patients a second chance of life.</p>
+        </div>
+      </div>
+      
       <div className='mt-10'>
         <Footer navLinks1={socialLinks} navLinks2={contactData} />
       </div>
