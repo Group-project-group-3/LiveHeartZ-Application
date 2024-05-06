@@ -19,3 +19,18 @@ const socialLinks = [
         icon: <RiLinkedinFill className='group-hover:text-white w-5 h-5' />
     },
 ];
+
+const contactData = [
+    {
+        display: '0753334172'
+    },
+    {
+        display: '0355682555'
+    },
+    {
+        display: 'LiveHeartz@yahoo.com'
+    },
+    {
+        display: 'No 25/6,Mannar Road,Puthiya salambaikulam,Vavuniya'
+    },
+];
