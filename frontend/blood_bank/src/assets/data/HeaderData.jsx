@@ -16,3 +16,14 @@ const navLinks = [
         display: 'CONTACT US'
     },
 ]
+
+const donorNavLinks = [
+    {
+        path: '/donor/requests',
+        display: 'REQUESTS'
+    },
+    {
+        path: '/donor/notifications',
+        display: 'NOTIFICATIONS'
+    }
+]
