@@ -216,6 +216,34 @@ useEffect(() => {
           </div>
         </form>
       </div>
+
+       {
+        donorList.length && available && <center className='text-[26px] homepara text-red-400 underline'>Your blood s avilable at our blood bank you can collect or you can contact thease donors.</center>
+      }
+
+        {donorList.length !== 0 ? (
+        loading ? (<Spinner1 />) : (<div className='grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-4'>
+          {donorList.map(item => (
+            <div className='flex justify-center p-[20px]' key={item._id}>
+              <div className='xl:w-[500px] lg:w-[500px] md:w-[500px] h-[300px] border-2 bg-slate-200  '>
+                <div className='flex justify-around  '>
+                  <div className='w-[200px] h-[200px]  mt-[20px]  '><span><img src={testImg} alt="" /></span></div>
+                  <div className='w-[200px] h-[200px] mt-[40px]  ' >
+                    <div>
+                      <span key='1' className='cardData text-[24px] font-bold'>{item.fullname}</span>
+                      <i className="fa-solid fa-phone"></i><span key='2' className='cardData'>{item.mobile}</span>
+                      <i className="fa-solid fa-location-dot"></i><span key='3' className='cardData'>{item.district} , {item.province}.</span>
+                      <i className="fa-regular fa-calendar"></i><span key='5' className='cardData'>Last Donation : {item.lastdonationdate}</span>
+                    </div>
+                  </div>
+                </div>
+
+
+
+
+
+
+       
     
   );
 
