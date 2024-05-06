@@ -206,6 +206,19 @@ const FindDonor = () => {
                 
                 <Button variant="outlined" style={{ color: '#BC005A', border: '2px solid #BC005A' }} onClick={getDonorsList} >FIND DONARS</Button>
               </Stack>
+                 <label className="block text-sm font-medium text-gray-700 mb-[5px]">
+                District
+              </label>
+              <select name="district" onChange={handleChnage} className='w-full h-[40px] bg-slate-100'>
+                <option value="Select">Select</option>
+                {
+
+                  districts.map(dis =>
+                    <option value={dis}>{dis}</option>
+                  )
+
+                }
+              </select>
 
 
               
