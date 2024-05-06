@@ -86,6 +86,23 @@ const News = () => {
           This may indicate that donating blood is good for a person’s overall health, but the researchers could not confirm this. However, they did point out that donating blood seems unlikely to shorten a person’s life span.</p>
         </div>
 
+        <div className='m-[20px] p-[15px] mt-[5px] pt-[2px]'>
+          <h3 className='font-bold text-[25px] h3Text'>Disadvantages</h3>
+          <p>Donating blood is safe, as long as the center follows the standard guidelines.<br/> The U.S. and many other countries have strict regulations to ensure safety. The FDA and American Association of Blood Banks (AABB) monitor blood banks for this purpose.<br/> Safety precautions they take include: 
+          <ul class='ps-[17px] md:list-disc'>
+            <li>screening donors for existing health conditions </li>
+            <li>using new needles for each donation</li>
+            <li>having professional staff on hand </li>
+            <li>providing monitoring and refreshments to ensure a safe recovery </li>
+          </ul>However, there are some potential disadvantages of donating blood.</p>
+        </div>
+      </div>
+
+      <div>
+        <Footer navLinks1={socialLinks} navLinks2={contactData} />
+      </div>
     </div>
   )
 }
+
+export default News;
