@@ -239,7 +239,24 @@ return (
             </div>
           </form>
         </div>
-        
+      </div>
+
+      <div className='w-[100] h-[400px]  mt-[50px] m-[10px] flex justify-center' style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+
+        <div className='w-[600px] p-[30px] ms-[190px]'>
+          <h2 className='text-pink-800 text-[50px] font-bold h2Text '>Give Blood</h2>
+          <h2 className='text-pink-800 text-[50px] font-bold h2Text'>Save A LIFE</h2>
+          <p className='homepara mt -[25px] mb-[25px] text-white'>If a consumer of a REST service needs to hard-code all the resource URLs,
+            <br />then it is tightly then it is loosely coupled. There is no tight. There is no tight<br />
+            dependency on the URI structure, <br />as it is specified and used from the response.</p>
+
+          <Stack direction="row" spacing={2}>
+            <Button variant="outlined" component={Link} to={"/register"} style={{ color: '#BC005A', border: '2px solid #BC005A' }}>Join Us</Button>
+          </Stack>
+
+
+        </div>
+
       </div>
       
       <div className='mt-10'>
