@@ -26,6 +26,16 @@ const FindDonor = () => {
   const requesterData = searchParams.get("data");
   var decodedFormData = JSON.parse(requesterData);
 
+
+
+
+
+
+  return () => {
+      // Cleanup code goes here
+    };
+  }, []);
+
   
 
 
