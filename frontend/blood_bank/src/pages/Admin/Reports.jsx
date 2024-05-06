@@ -67,7 +67,9 @@ const deleteDonor = async (email) => {
     ];
 
     return (
-        <div className='grid grid-cols-1 p-[30px] '></div>
+        <div className='grid grid-cols-1 p-[30px] '>
+             <center className='homepara font-bold text-[26px]'>Donor List</center>
+        </div>
     )
 }
 
