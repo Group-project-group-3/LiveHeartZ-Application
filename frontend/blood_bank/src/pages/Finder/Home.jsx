@@ -314,6 +314,26 @@ return (
 
         </div>
       </div>
+
+      <hr className="border-b-2 border-pink-600  m-[25px]" />
+      <div className='flex flex-row items-center'>
+            <div className='flex w-[400px] ms-[120px]'>
+              <img src={donar}></img>
+            </div>
+            <div className='flex flex-col w-[600px] ms-[240px] items-center'>
+              <h1 className='font-bold text-2xl mb-4'>
+              Why should we donate blood...?
+              </h1>
+              <p >
+              Donating blood saves lives in medical treatments and emergencies, supporting community well-being. Regular donations are essential due to the short shelf life of blood components. The process is simple and safe, providing health benefits to donors. Blood donation events foster community bonding. This philanthropic act ensures a steady supply, preventing shortages and making a positive impact on lives.
+              </p>
+              <Button className='w-[150px] ' component={Link} to={"/register"} style={{ backgroundColor: '#BC005A', border: '2px solid white',color:'white',marginRight:'200px' }}>
+                <b>Be A Donar</b>
+              </Button>
+
+            </div>
+
+      </div>
       
       <div className='mt-10'>
         <Footer navLinks1={socialLinks} navLinks2={contactData} />
