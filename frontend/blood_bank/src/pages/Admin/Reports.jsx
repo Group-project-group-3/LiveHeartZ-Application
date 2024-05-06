@@ -40,7 +40,13 @@ const deleteDonor = async (email) => {
       };
     }, [deleteDonor]);
 
-    const columns = []
+    const columns = [
+        {
+            title: 'Donor Email',
+            dataIndex: '_id',
+            key: 'email',
+        },
+    ]
 }
 
 export default Report
