@@ -296,6 +296,24 @@ return (
 
 
       </div>
+
+      <hr className="border-b-2 border-pink-600  m-[25px]" />
+      <div className='flex justify-center'>
+        <div className='grid xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-4 sm:grid-cols-2  p-[30px]'>
+          {
+            bloodCount.map((item) =>
+              <div className='w-[100px] h-[100px] border-2 m-[25px] flex justify-center items-center bg-slate-200' >
+                <div className='w-14 h-14 rounded-full border border-gray-500 bg-white'>
+                  <center className='text-pink-600 font-bold '>{item.type}</center>
+                  <center className='homepara text-[15px] font-bold'>{item.count}</center>
+                </div>
+              </div>
+
+            )
+          }
+
+        </div>
+      </div>
       
       <div className='mt-10'>
         <Footer navLinks1={socialLinks} navLinks2={contactData} />
