@@ -39,6 +39,17 @@ const Home = () => {
     province: 'Select',
     district: 'Select'
   });
+
+  const handleBloodGroupChange = (event) => {
+    setFormData({ ...formData, bloodgroup: event.target.value });
+  };
+
+  const handleProvinceChange = (event) => {
+    setFormData({ ...formData, province: event.target.value });
+  };
+  const handleDistrictChange = (event) => {
+    setFormData({ ...formData, district: event.target.value });
+  };
 }
 
 export default Home
