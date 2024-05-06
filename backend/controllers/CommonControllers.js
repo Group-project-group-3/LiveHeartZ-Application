@@ -47,3 +47,29 @@ export const bloodBankCount = async (req, res) => {
 
     }
 }
+
+export const bloodBankCheakAvailability = async (req, res) => {
+
+    try {
+
+        const blood = req.params.blood;
+        const availability = await BloodBank.find({
+
+            $and: [
+                { count: { $gt: 0 } },
+                { type: blood }
+            ]
+        });
+        
+        if (availability.length != 0) {
+            res.status(200).json({ available: true });
+        } else {
+            res.status(201).json({ available: false });
+        }
+
+
+    } catch (error) {
+        res.status(400).json({ success: false, message: `Some Error Occured ${error.message}` });
+
+    }
+}
