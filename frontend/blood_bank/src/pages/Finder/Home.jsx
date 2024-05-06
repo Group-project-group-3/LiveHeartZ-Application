@@ -355,6 +355,48 @@ return (
             </p>
           </div>
       </div>
+
+      <div className='flex p-30 items-center justify-center'>
+            <div className='flex flex-col items-center justify-center'>
+            <div className='bg-gray-400 flex flex-col items-center justify-center w-[110px] h-[110px] rounded-full text-[40px]  m-[30px] '>
+            <Link to="/register" component={Link}>
+              <p className='font-bold'>{totalDonorsCount}</p>
+              </Link>
+            </div>
+            <p className='font-bold'>Registers</p>
+            </div>
+            <div  className='flex flex-col items-center justify-center'>
+              <div className='bg-pink-700 flex items-center justify-center m-[20] w-[110px] h-[110px] rounded-full m-[30px]'>
+              <Link to="/register" component={Link}>
+                <img src={hand} className='w-[60px]' alt="Hand" />
+                </Link>
+              </div>
+              <p className='font-bold'>
+              Be a donar
+              </p>
+            </div>
+
+            <div  className='flex flex-col items-center justify-center'>
+            <div className='bg-gray-400 flex items-center justify-center w-[110px] h-[110px] rounded-full  m-[30px] '>
+              <Link to="/register" component={Link}>
+              <img src={donation} className='w-[60px]' alt="Donation" />
+              </Link>
+            </div>
+            <p className='font-bold'>Volunteer</p>
+            </div>
+            
+            <div  className='flex flex-col items-center justify-center'>
+              <div className='bg-pink-700 flex flex-col items-center justify-center w-[110px] h-[110px] rounded-full m-[30px] text-[40px]'>
+              <Link to="/requestblood" component={Link}>
+                <p className='font-bold'>{totalRequestsCount}</p>
+                </Link>
+              </div>
+              <p className='font-bold'>
+                Requests
+              </p>
+            </div>
+            
+      </div>
       
       <div className='mt-10'>
         <Footer navLinks1={socialLinks} navLinks2={contactData} />
