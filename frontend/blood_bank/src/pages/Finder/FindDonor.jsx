@@ -20,12 +20,12 @@ import Province from '../../assets/data/SelectData';
 
 const FindDonor = () => {
 
-  const [verifyuser, setVerifyUser] = useState(false);
-  const location = useLocation();
-  const searchParams = new URLSearchParams(location.search);
-  const verify = searchParams.get("verify");
-  const requesterData = searchParams.get("data");
-  var decodedFormData = JSON.parse(requesterData);
+  const [verifyuser, setVerifyUser] = useState(false);//Here, it initializes verifyuser state variable with false value and provides a function setVerifyUser to update its value.
+  const location = useLocation();//useLocation() is a custom hook likely from a library such as React Router) used to access the current URL location in a React component.
+  const searchParams = new URLSearchParams(location.search);//new URLSearchParams(location.search) creates a new URLSearchParams object from the query parameters in the current URL.
+  const verify = searchParams.get("verify");//It  retrieves the value of the query parameter named "verify" from the URL, if it exists.
+  const requesterData = searchParams.get("data");//It retrieves the value of the query parameter named "data" from the URL, if it exists.
+  var decodedFormData = JSON.parse(requesterData);//It attempts to parse the value of the "data" query parameter as JSON. requesterData is the value retrieved from the URL.
 
 
 
