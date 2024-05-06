@@ -54,6 +54,12 @@ const Donor = () => {
             dataIndex: 'lastdonationdate',
             key: 'lastdonationdate',
         },
+        {
+            title: 'Email',
+            dataIndex: 'email',
+            key: 'email',
+            render: (text) => <a href={`mailto:${text}`} style={{ color: 'blue', textDecoration: 'underline', cursor: 'pointer' }}>{text}</a>,
+        },
     ];
 }
 
