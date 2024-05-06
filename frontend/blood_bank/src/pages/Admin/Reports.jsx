@@ -58,7 +58,9 @@ const deleteDonor = async (email) => {
                 const tempData = JSON.stringify(recode);
                 const row = JSON.parse(tempData);
         
-                return <></>
+                return <>
+                <div key={recode.key} className='flex gap-7 '></div>
+                </>
     
         }
     ];
