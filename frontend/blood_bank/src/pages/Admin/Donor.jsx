@@ -44,6 +44,11 @@ const Donor = () => {
             dataIndex: 'province',
             key: 'province',
         },
+        {
+            title: 'Blood Type',
+            dataIndex: 'bloodgroup',
+            key: 'bloodgroup',
+          },
     ];
 }
 
