@@ -111,6 +111,8 @@ useEffect(() => {
   };
 
 
+  // It checks if the selected options for blood group, province, and district are valid (not equal to "Select").
+  //If any of these fields are not selected, it sets an appropriate error message in the errors object.
   const validateFormData = () => {
     const errors = {};
     if (formData.bloodgroup.trim() === "Select") {
