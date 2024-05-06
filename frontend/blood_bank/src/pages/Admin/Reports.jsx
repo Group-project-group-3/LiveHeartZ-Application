@@ -34,6 +34,10 @@ const deleteDonor = async (email) => {
 
         console.error('Error fetching data:', error);
       });
+
+      return () => {
+        // Cleanup code goes here
+      };
     }, [deleteDonor]);
 }
 
