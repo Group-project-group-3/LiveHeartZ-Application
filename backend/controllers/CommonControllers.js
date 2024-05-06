@@ -73,3 +73,25 @@ export const bloodBankCheakAvailability = async (req, res) => {
 
     }
 }
+
+export const updateBloodBankCount = async (req, res) => {
+
+    try {
+        const { id, option, count } = req.params;
+
+        if (option == "add") {
+
+            await BloodBank.findByIdAndUpdate(id, { $inc: { count: 1 } });
+
+        }
+        else if (option == "sub") {
+            await BloodBank.findByIdAndUpdate(id, { $inc: { count: -1 } });
+
+        }
+
+
+    } catch (error) {
+        res.status(400).json({ success: false, message: `Some Error Occured ${error.message}` });
+
+    }
+}
