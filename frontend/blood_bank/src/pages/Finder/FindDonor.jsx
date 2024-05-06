@@ -145,6 +145,7 @@ useEffect(() => {
     }
   };
 
+  //It likely intends to handle some functionality related to opening a report box,
   const openReportBox = () => {
 
   }
