@@ -44,7 +44,11 @@ const News = () => {
             </div>
           </div>
         </div>
-      
+
+        <div className='m-[20px] p-[15px] mt-[10px] mb-[5] pt-[2px] pb-[5px]'>
+          <h6 className='text-pink-600 text-[15px] font-bold h6Text mt-[10px]'>Benefits for the donor</h6>
+          <p >For many people, blood donation offers many health benefits with few risks. The strict regulation of blood banks means that a donor can give their blood or plasma safely in the United States. Donated blood can save the lives of people in need. However, according to some medical professionals, it may also benefit the donor. The sections below will look at some benefits for the donor in more detail.</p>
+        </div>
     </div>
   )
 }
