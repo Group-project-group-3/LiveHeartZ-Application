@@ -119,6 +119,18 @@ useEffect(() => {
             console.error('Error fetching data:', error);
         });
 }, []);
+
+return (
+    <div>
+      <div>
+        <Header navLinks={navLinks} />
+      </div>
+      <div className='mt-10'>
+        <Footer navLinks1={socialLinks} navLinks2={contactData} />
+      </div>
+    </div>
+  )
+  
 }
 
 export default Home
