@@ -51,6 +51,8 @@ useEffect(() => {
   const [chatVisible, setChatVisible] = useState(false);
   const [available, setAvailable] = useState(false);
 
+  //This state variable can be used to manage form data in a React component, 
+  //typically used for capturing user input such as selecting a blood group, province, and district
   const [formData, setFormData] = useState({
     bloodgroup: 'Select',
     province: 'Select',
