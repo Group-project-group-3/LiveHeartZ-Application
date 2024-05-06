@@ -77,6 +77,8 @@ useEffect(() => {
     }
   }
 
+  //function is used to handle changes in form input fields. 
+  //It takes an event object e as a parameter, typically triggered by a user's interaction with an input field.
   const handleChnage = (e) => {
     const { value, name } = e.target;
     setFormData({ ...formData, [name]: value });
