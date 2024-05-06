@@ -17,7 +17,9 @@ const deleteDonor = async (email) => {
       } catch (error) {
   
       }
-}
+    }
+
+    useEffect(() => {}, [deleteDonor]);
 }
 
 export default Report
