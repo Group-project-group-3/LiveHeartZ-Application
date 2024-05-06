@@ -33,11 +33,7 @@ const FindDonor = () => {
     }
 
 
-    return () => {
-      // Cleanup code goes here
-    };
-  }, []);
-
+   
 
   const [districts, setDistricts] = useState([]);
   const [errors, setErrors] = useState({});
