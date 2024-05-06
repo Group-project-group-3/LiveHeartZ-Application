@@ -36,6 +36,7 @@ useEffect(() => {
     }
 
 
+  //It is an optional cleanup function that runs when the component unmounts or before the effect runs again. 
   return () => {
       // Cleanup code goes here
     };
