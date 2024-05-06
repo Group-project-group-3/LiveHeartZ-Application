@@ -263,18 +263,13 @@ useEffect(() => {
           ))}
         </div>)
 
+        ) : (
+        <div className='flex justify-center w-full/2 h-[500px] items-center bg-slate-200 m-[20px] homepara'>No Available Donor/Not Select All Fields</div>
+      )}
 
-
-
-
-
-
-       
-    
-  );
-
- 
-            
+      <Footer navLinks1={socialLinks} navLinks2={contactData} />
+    </div>  
+  );           
 }
 export default FindDonor;
 
