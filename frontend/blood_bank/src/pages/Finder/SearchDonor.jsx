@@ -24,6 +24,20 @@ const SearchDonor = () => {
       // Cleanup code goes here
     };
   }, []);
+
+  const getDonorsList = async () => {
+
+
+      try {
+        const data = await axiosGet(`donor/finddonor/${decodedFormData.bloodgroup}/${decodedFormData.province}/${decodedFormData.district}`);
+        setDonorList(data.data);
+
+
+      } catch (error) {
+        console.error('Error fetching donor list:', error);
+      }
+
+  };
 }
 
 export default SearchDonor
