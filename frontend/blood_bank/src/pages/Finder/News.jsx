@@ -49,6 +49,20 @@ const News = () => {
           <h6 className='text-pink-600 text-[15px] font-bold h6Text mt-[10px]'>Benefits for the donor</h6>
           <p >For many people, blood donation offers many health benefits with few risks. The strict regulation of blood banks means that a donor can give their blood or plasma safely in the United States. Donated blood can save the lives of people in need. However, according to some medical professionals, it may also benefit the donor. The sections below will look at some benefits for the donor in more detail.</p>
         </div>
+
+        <div className='m-[20px] p-[15px] mt-[5px] pt-[2px]'>
+          <h6 className='text-pink-600 text-[15px] font-bold h6Text'>Identifying adverse health effects</h6>
+          <p>Each person who donates blood completes a simple physical examination and blood test before giving blood. These are not in-depth tests, but they may help identify unknown health concerns, such as anemia or high or low blood pressure.<br/>
+          The test will check the person’s: 
+              <ul class='ps-[17px] md:list-disc'>
+                <li>blood pressure </li>
+                <li>body temperature </li>
+                <li>heart rate </li>
+                <li>hemoglobin, or iron, levels</li>
+              </ul>
+                 If the test reveals a problem, the person will not be able to donate blood. However, the results could be a first step toward seeking treatment.
+          </p>
+        </div>
     </div>
   )
 }
