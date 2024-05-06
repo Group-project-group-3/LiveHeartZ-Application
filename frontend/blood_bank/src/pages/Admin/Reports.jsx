@@ -54,6 +54,9 @@ const deleteDonor = async (email) => {
         {
             key: 'Action',
             title: 'Actions', 
+            render: (recode) => {
+                const tempData = JSON.stringify(recode);
+                const row = JSON.parse(tempData);
         }
     ]
 }
