@@ -72,3 +72,5 @@ const quickLink03 = [
         display: 'temp'
     },
 ];
+
+export { socialLinks, contactData, quickLink02, quickLink03 };
