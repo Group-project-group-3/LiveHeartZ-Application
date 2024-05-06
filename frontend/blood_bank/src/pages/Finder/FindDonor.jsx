@@ -37,10 +37,6 @@ const FindDonor = () => {
   }, []);
 
   
-
-
-   
-
   const [districts, setDistricts] = useState([]);
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(true);
