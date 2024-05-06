@@ -9,6 +9,11 @@ import bloodnews from '../../assets/images/News/bloodnews.webp';
 const News = () => {
   return (
     <div>
+      <div>
+        <Header navLinks={navLinks} />
+      </div>
+
+      
     </div>
   )
 }
