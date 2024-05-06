@@ -68,6 +68,11 @@ const News = () => {
           <h6 className='text-pink-600 text-[15px] font-bold h6Text'>Contributing to the community</h6>
           <p>Donating one unit of blood may save the lives of up to three people, according to the American Red Cross. Blood donors provide a vital service to the community. Making a difference in the lives of others can boost a donor’s sense of well-being.</p>
         </div>
+
+        <div className='m-[20px] p-[15px] mt-[5px] pt-[2px] me-[2px]'>
+          <h6 className='text-pink-600 text-[15px] font-bold h6Text'>Weight management</h6>
+          <p>There are claims that giving blood burns 650 calories. However, there does not appear to be any scientific evidence to prove this. Any benefits of this calorie loss will be short-term and will not help a person lose weight. However, a 2012 study suggests that because blood donation centers need to weigh people before they give blood, this could help identify people with obesity and offer them help to manage their weight and any related health problems. It can also identify people with a low weight, who may also benefit from counseling and advice.</p>
+        </div>
     </div>
   )
 }
