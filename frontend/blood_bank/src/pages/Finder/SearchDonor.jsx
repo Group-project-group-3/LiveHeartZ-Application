@@ -12,6 +12,18 @@ const SearchDonor = () => {
   const searchParams = new URLSearchParams(location.search);
   const requesterData = searchParams.get("data");
   var decodedFormData = JSON.parse(requesterData);
+
+  useEffect(() => {
+
+    getDonorsList().then(setInterval(() => {
+      setLoading(false);
+    }, 500))
+
+
+    return () => {
+      // Cleanup code goes here
+    };
+  }, []);
 }
 
 export default SearchDonor
