@@ -60,6 +60,11 @@ const Donor = () => {
             key: 'email',
             render: (text) => <a href={`mailto:${text}`} style={{ color: 'blue', textDecoration: 'underline', cursor: 'pointer' }}>{text}</a>,
         },
+        {
+            title: 'Mobile',
+            dataIndex: 'mobile',
+            key: 'mobile',
+          }
     ];
 }
 
