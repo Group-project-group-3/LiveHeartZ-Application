@@ -20,7 +20,23 @@ const OtpReceive = () => {
     <div className='flex justify-center items-center h-screen bg-stone-100 '>
 
       <div className=' border-8 p-[75px]' >
+        <div>
+          <center className='homepara text-[26px]'>Hi <span className='text-red-600 font-bold'>{decodedFormData.fullname}</span> Thanks for Register With Us</center>
+          <center className='homepara text-[16px]'>Enter 4 Digit Code which Receive in Your Email : <span className='text-red-600 font-bold'>{decodedFormData.email}</span></center>
 
+        </div>
+
+        <div className='w-full h-[300px] bg-slate-200 mt-[25px] p-[25px] border-2'>
+          <center className='font-sans mb-[10px]'>Enter Otp</center>
+          <center className='font-sans mb-[10px] '><input type='text' onChange={getOtp} className='w-[250px]' ></input></center>
+
+          <center className='mb-[50px] '> <Button variant="contained" color="success" onClick={registerDonor}>Submit</Button></center>
+
+          <center className='homepara mb-[10px]' >I Not Recive Otp Please Sen Agin</center>
+          <center > <Button variant="contained" endIcon={<SendIcon />}>
+            Send
+          </Button></center>
+        </div>
       </div>
     </div>
   )
