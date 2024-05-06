@@ -57,8 +57,11 @@ const deleteDonor = async (email) => {
             render: (recode) => {
                 const tempData = JSON.stringify(recode);
                 const row = JSON.parse(tempData);
+        
+                return <></>
+    
         }
-    ]
+    ];
 }
 
 export default Report
