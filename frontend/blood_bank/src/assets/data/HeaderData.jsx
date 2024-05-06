@@ -46,3 +46,5 @@ const adminNavLinks = [
         display: 'REPORTS'
     }
 ]
+
+export { navLinks, donorNavLinks, adminNavLinks }
