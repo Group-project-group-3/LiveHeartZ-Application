@@ -48,7 +48,12 @@ const Donor = () => {
             title: 'Blood Type',
             dataIndex: 'bloodgroup',
             key: 'bloodgroup',
-          },
+        },
+        {
+            title: 'Last Donate',
+            dataIndex: 'lastdonationdate',
+            key: 'lastdonationdate',
+        },
     ];
 }
 
