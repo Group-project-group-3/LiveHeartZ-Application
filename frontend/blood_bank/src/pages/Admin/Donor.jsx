@@ -34,6 +34,16 @@ const Donor = () => {
             dataIndex: 'fullname',
             key: 'count',
           },
+        {
+            title: 'District',
+            dataIndex: 'district',
+            key: 'district',
+        },
+        {
+            title: 'Province',
+            dataIndex: 'province',
+            key: 'province',
+        },
     ];
 }
 
