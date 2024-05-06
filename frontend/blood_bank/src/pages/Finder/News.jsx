@@ -98,6 +98,9 @@ const News = () => {
         </div>
       </div>
 
+      <div>
+        <Footer navLinks1={socialLinks} navLinks2={contactData} />
+      </div>
     </div>
   )
 }
