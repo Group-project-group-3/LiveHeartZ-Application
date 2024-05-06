@@ -64,8 +64,13 @@ const Donor = () => {
             title: 'Mobile',
             dataIndex: 'mobile',
             key: 'mobile',
-          }
-    ];
+        }
+
+     ];
+    return(
+        <div className='grid grid-cols-1 p-[30px] '>
+            </div>
+    )
 }
 
 export default Donor
