@@ -238,6 +238,32 @@ useEffect(() => {
                   </div>
                 </div>
 
+                
+                {
+                  verifyuser ? (<div className='grid grid-cols-2'>
+                    <div>
+                      {chatVisible && <Chat name={item.fullname} id={item._id} />}
+                    </div>
+                    <div>
+                      {chatVisible && <Button style={{ backgroundColor: '#BC005A', border: '2px solid white',color: 'white' }} onClick={() => sendMail(item._id)} className='w-full'>
+                        Request Email
+                      </Button>}
+
+                    </div>
+                  </div>) : (
+                    <div className='flex justify-between '>
+                      <Link className='text-[16px] homepara text-green-800 font-bold w-full flex justify-center ' style={{ color: '#BC005A', border: '2px solid #BC005A' }} to={'/requestblood'}>SEND REQUEST</Link>
+                      <Report name={item.fullname} email={item.email} />
+
+                    </div>)
+                }
+
+              </div>
+            </div>
+          ))}
+        </div>)
+
+
 
 
 
