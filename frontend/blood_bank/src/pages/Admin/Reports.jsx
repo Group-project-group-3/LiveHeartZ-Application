@@ -46,6 +46,11 @@ const deleteDonor = async (email) => {
             dataIndex: '_id',
             key: 'email',
         },
+        {
+            title: 'Report Count',
+            dataIndex: 'count',
+            key: 'count',
+          },
     ]
 }
 
