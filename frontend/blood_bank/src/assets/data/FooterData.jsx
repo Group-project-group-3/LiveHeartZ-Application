@@ -34,3 +34,22 @@ const contactData = [
         display: 'No 25/6,Mannar Road,Puthiya salambaikulam,Vavuniya'
     },
 ];
+
+const quickLink02 = [
+    {
+        path: "",
+        display: 'temp'
+    },
+    {
+        path: "",
+        display: 'temp'
+    },
+    {
+        path: "",
+        display: 'temp'
+    },
+    {
+        path: "",
+        display: 'temp'
+    },
+];
