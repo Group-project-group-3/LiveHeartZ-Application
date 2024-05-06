@@ -128,6 +128,7 @@ useEffect(() => {
     return Object.keys(errors).length === 0;
   };
 
+  //This function seems to be responsible for fetching a list of donors based on the selected blood group, province, and district.
   const getDonorsList = async () => {
     if (validateFormData()) {
       await axiosGet(`donor/finddonor/${formData.bloodgroup}/${formData.province}/${formData.district}`)
