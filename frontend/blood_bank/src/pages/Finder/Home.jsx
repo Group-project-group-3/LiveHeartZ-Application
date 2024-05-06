@@ -28,3 +28,17 @@ import { useNavigate } from 'react-router-dom';
 import { axiosGet } from '../../AxiosOperations';
 
 import Spinner1 from '../../pages/spinners/Spinner1';
+
+const Home = () => {
+  const [bloodCount, setBloodCount] = React.useState([]);
+  const [district, setDistrict] = useState([]);
+
+  const navigetor = useNavigate();
+  const [formData, setFormData] = useState({
+    bloodgroup: 'Select',
+    province: 'Select',
+    district: 'Select'
+  });
+}
+
+export default Home
