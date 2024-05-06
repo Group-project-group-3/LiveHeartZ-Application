@@ -334,6 +334,27 @@ return (
             </div>
 
       </div>
+
+      <div className='w-[full] h-[150px] bg-pink-800 m-7 flex flex-col items-center justify-center'>
+        <h1 className='font-bold text-[35px] p-4 text-white text-center'>
+          “A few minutes of your time can give someone a lifetime.”
+        </h1>
+        <Button variant="outlined" component={Link} to={"/register"} style={{ color: 'white', border: '2px solid white' }}>REGISTER</Button>
+      </div>
+
+      <div className='flex items-center justify-center  p-[20px]'>
+          <div className='text-center'>
+            <h1 className='font-bold text-3xl p-4 text-pink-800'>
+              LiveHeartZ
+            </h1>
+            <p>
+              Help someone <span className='font-bold text-pink-600'>donate blood</span> and save a life.
+            </p>
+            <p>
+              If a consumer of a REST service needs to hard-code all the resource URLs, then it is tightly then it is loosely coupled. There is no tight dependency on the URI structure, as it is specified and used from the response. Then it is tightly then it is loosely coupled. 
+            </p>
+          </div>
+      </div>
       
       <div className='mt-10'>
         <Footer navLinks1={socialLinks} navLinks2={contactData} />
