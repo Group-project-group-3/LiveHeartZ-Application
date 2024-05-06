@@ -59,6 +59,7 @@ useEffect(() => {
     district: 'Select',
   });
 
+  // making an asynchronous HTTP request using Axios to check the availability of blood in a blood bank based on the selected blood group 
   const bloodbankCheck = () => {
     try {
       axiosGet(`home/bloodbank/availability/${formData.bloodgroup}`).then((data) => {
