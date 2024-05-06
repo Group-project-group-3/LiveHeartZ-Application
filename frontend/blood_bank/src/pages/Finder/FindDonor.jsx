@@ -28,7 +28,11 @@ const FindDonor = () => {
 
 
 
+useEffect(() => {
 
+    if (verify == "true") {
+      setVerifyUser(true);
+    }
 
 
   return () => {
