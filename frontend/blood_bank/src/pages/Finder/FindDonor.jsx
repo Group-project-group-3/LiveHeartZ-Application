@@ -150,6 +150,33 @@ useEffect(() => {
 
   }
 
+  return(
+     <div>
+      <Header navLinks={navLinks} />
+      <div className='flex flex-col'>
+        <form>
+          <div className='flex sm:min-w-500 justify-center pt-[20px] font-bold '>
+            Search Blood
+          </div>
+          <div className='grid lg:grid-cols-3 gap-4  ml-[150px] mr-[150px] p-[25px] '>
+            <div>
+              <label >Blood Group</label>
+              <select name="bloodgroup" onChange={handleChnage} className='w-full h-[40px] bg-slate-100'>
+                <option value="Select">Select</option>
+                <option value='A-'>A-</option>
+                <option value="A+">A+</option>
+                <option value="AB-">AB-</option>
+                <option value="AB+">AB+</option>
+                <option value="B-">B-</option>
+                <option value="B+">B+</option>
+                <option value="O-">O-</option>
+                <option value="O+">O+</option>
+              </select>
+              {errors.bloodgroup && <span className="text-red-500">{errors.bloodgroup}</span>}
+            </div>
+    
+  );
+
  
             
 }
