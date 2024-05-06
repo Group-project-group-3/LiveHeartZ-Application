@@ -23,4 +23,24 @@ export const setReports = async (req, res) => {
     }
 }
 
+export const getReportCount = async (req, res) => {
+
+    try {
+
+        const reports = await Reports.aggregate([
+            {
+                $group: {
+                    _id:"$email" ,
+                    count: { $sum: 1 },
+                  
+                }
+            }
+        ]);
+        res.status(200).json(reports);
+
+
+    } catch (error) {
+        res.status(400).json({ success: false, message: `Some Error occured ${error.message}` });
+
+    }
 }
