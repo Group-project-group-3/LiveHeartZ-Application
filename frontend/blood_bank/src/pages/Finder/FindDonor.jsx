@@ -97,6 +97,7 @@ useEffect(() => {
 
   };
 
+  //This sendMail function is an asynchronous function that sends an email to a recipient identified by id
   const sendMail = async (id) => {
 
     try {
