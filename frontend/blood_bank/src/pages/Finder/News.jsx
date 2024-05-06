@@ -79,6 +79,13 @@ const News = () => {
           <p>In 2019, researchers looked at the data of nearly 160,000 females who had donated blood for 10 years or more. They concluded that blood donation offers a “protective effect of long-term, high-frequency blood donation against cardiovascular disease.”</p>
         </div>
 
+        <div className='m-[20px] p-[15px] mt-[5px] pt-[2px] me-[2px]'>
+          <h6 className='text-pink-600 text-[15px] font-bold h6Text'>Overall health</h6>
+          <p>In 2007, researchers looked at the data of over 1 million blood donors. Among the participants, there was a 30%Trusted Source lower chance of dying from any cause and a 4% lower chance of developing cancer. The authors concluded that “blood donors enjoy better than average health.” <br/>
+          A 2015 studyTrusted Source took a fresh look at the same data. After adjusting for other factors, the researchers concluded that for each annual donation, a person’s risk of dying from any cause fell by 7.5%, on average. <br/>
+          This may indicate that donating blood is good for a person’s overall health, but the researchers could not confirm this. However, they did point out that donating blood seems unlikely to shorten a person’s life span.</p>
+        </div>
+
     </div>
   )
 }
