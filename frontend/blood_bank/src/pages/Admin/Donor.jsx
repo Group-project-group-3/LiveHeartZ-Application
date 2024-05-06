@@ -69,7 +69,13 @@ const Donor = () => {
      ];
     return(
         <div className='grid grid-cols-1 p-[30px] '>
-            </div>
+          <center className='homepara font-bold text-[26px]'>Donor List</center>
+      {
+        loading ? (<Spinner1 />) : (<div className='bg-slate-400 m-[50px]'>
+          <Table columns={columns} dataSource={donordata} />
+        </div>)
+      }
+         </div>
     )
 }
 
