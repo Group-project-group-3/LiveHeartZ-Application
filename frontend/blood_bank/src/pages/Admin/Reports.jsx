@@ -19,7 +19,22 @@ const deleteDonor = async (email) => {
       }
     }
 
-    useEffect(() => {}, [deleteDonor]);
+    useEffect(() => {
+        axiosGet('report/getreport')
+
+        
+      .then(data => {
+
+        setReports(data.data);
+
+      }).then(setInterval(() => {
+        setLoading(false);
+      }, 350))
+      .catch(error => {
+
+        console.error('Error fetching data:', error);
+      });
+    }, [deleteDonor]);
 }
 
 export default Report
