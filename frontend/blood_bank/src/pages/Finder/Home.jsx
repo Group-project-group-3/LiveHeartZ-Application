@@ -61,6 +61,64 @@ const Home = () => {
 
 
   }
+
+  useEffect(() => {
+
+    axiosGet('home/count')
+
+      .then(data => {
+
+        setBloodCount(data.data);
+
+      })
+      .catch(error => {
+
+        console.error('Error fetching data:', error);
+      });
+
+
+    return () => {
+      // Cleanup code goes here
+    };
+  }, []);
+
+  useEffect(() => {
+    getDistricts();
+  }, );
+
+  const [totalDonorsCount, setTotalDonorsCount] = React.useState([]);
+
+    useEffect(() => {
+      axiosGet('donor/total-donors-count')
+            .then(response => {
+                const data = response.data;
+                if (data.success) {
+                    setTotalDonorsCount(data.count);
+                } else {
+                    console.error('Error fetching total donors count:', data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
+    }, []);
+  
+    const [totalRequestsCount, setTotalRequestsCount] = React.useState([]);
+
+useEffect(() => {
+  axiosGet('finder/total-requests-count') // Assuming your endpoint is '/api/total-requests-count'
+        .then(response => {
+            const data = response.data;
+            if (data.success) {
+                setTotalRequestsCount(data.count);
+            } else {
+                console.error('Error fetching total requests count:', data.message);
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+        });
+}, []);
 }
 
 export default Home
