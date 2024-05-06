@@ -39,6 +39,8 @@ const deleteDonor = async (email) => {
         // Cleanup code goes here
       };
     }, [deleteDonor]);
+
+    const columns = []
 }
 
 export default Report
