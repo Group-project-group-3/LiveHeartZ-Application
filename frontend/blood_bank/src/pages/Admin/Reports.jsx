@@ -11,6 +11,12 @@ const [loading, setLoading] = useState(true);
 
 const deleteDonor = async (email) => {
     
+    try {
+        await axiosGet(`donor/delete/${email}`);
+        alert("Succsessfully Delete Donor");
+      } catch (error) {
+  
+      }
 }
 }
 
