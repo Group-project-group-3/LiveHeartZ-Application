@@ -63,6 +63,11 @@ const News = () => {
                  If the test reveals a problem, the person will not be able to donate blood. However, the results could be a first step toward seeking treatment.
           </p>
         </div>
+
+        <div className='m-[20px] p-[15px] mt-[5px] pt-[2px]'>
+          <h6 className='text-pink-600 text-[15px] font-bold h6Text'>Contributing to the community</h6>
+          <p>Donating one unit of blood may save the lives of up to three people, according to the American Red Cross. Blood donors provide a vital service to the community. Making a difference in the lives of others can boost a donor’s sense of well-being.</p>
+        </div>
     </div>
   )
 }
