@@ -27,3 +27,22 @@ const donorNavLinks = [
         display: 'NOTIFICATIONS'
     }
 ]
+
+const adminNavLinks = [
+    {
+        path: '/admin/bloodbank',
+        display: 'BLOOD BANK'
+    },
+    {
+        path: '/admin/donors',
+        display: 'DONORS'
+    },
+    {
+        path: '/admin/requests',
+        display: 'REQUESTS'
+    },
+    {
+        path: '/admin/reports',
+        display: 'REPORTS'
+    }
+]
