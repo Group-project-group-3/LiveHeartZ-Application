@@ -258,6 +258,44 @@ return (
         </div>
 
       </div>
+
+      <div className='grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-20 p-[20px]'>
+        <div className='border-2 p-[25px] flex flex-col items-center  bg-gray-200 '>
+          <div className='w-[400px] h-[200px] mb-[15px] bg-white flex justify-center items-center'>
+            <img src={blooddrop} alt="Blood Drop" className="w-[150px]" />
+          </div>
+
+          <div className='text-center'>
+            <h2 className='font-bold text-2xl mb-4'>REQUEST BLOOD</h2>
+            <p className='homepara text-sm'>Some quick example text to build on the card title</p>
+            <p className='homepara text-sm'>and make up the bulk of the card's content.</p>
+            <a href="#" className='homepara text-sm block mt-4'>Go somewhere</a>
+          </div>
+          <div className='flex justify-center mt-6'>
+            <Stack direction="row" spacing={2}>
+              <Button variant="outlined" style={{ color: '#BC005A', border: '2px solid #BC005A' }} component={Link} to="/requestblood">Request Blood</Button>
+            </Stack>
+          </div>
+        </div>
+        <div className='border-2 p-[25px] flex flex-col items-center  bg-gray-200'>
+          <div className='w-[400px] h-[200px] mb-[15px] bg-white flex justify-center items-center'>
+            <img src={blooddonor} alt="Blood Donor" className="mx-auto w-[150px]" />
+          </div>
+          <div className='text-center'>
+            <h2 className='font-bold text-2xl mb-4'>FIND DONOR</h2>
+            <p className='homepara text-sm'>Some quick example text to build on the card title</p>
+            <p className='homepara text-sm'>and make up the bulk of the card's content.</p>
+            <a href="#" className='homepara text-sm block mt-4'>Go somewhere</a>
+          </div>
+          <div className='flex justify-center mt-6'>
+            <Stack direction="row" spacing={2}>
+              <Button variant="outlined" style={{ color: '#BC005A', border: '2px solid #BC005A' }} component={Link} to={`/finddonor?verify=${encodeURIComponent(false)}`}>Find Donor</Button>
+            </Stack>
+          </div>
+        </div>
+
+
+      </div>
       
       <div className='mt-10'>
         <Footer navLinks1={socialLinks} navLinks2={contactData} />
