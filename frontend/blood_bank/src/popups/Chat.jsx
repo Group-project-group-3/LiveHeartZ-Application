@@ -24,6 +24,7 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
     },
 }));
 
+//defining a functional component named Chat which handles the opening and closing of a dialog box.
 export default function Chat(props) {
     const [open, setOpen] = React.useState(false);
 
