@@ -14,6 +14,7 @@ Before you begin, ensure you have met the following requirements:
 To install LiveHeartZ-Application, follow these steps:
 
 Linux and macOS:
+```bash
 git clone https://github.com/yourusername/LiveHeartZ-Application.git
 cd LiveHeartZ-Application
 npm install
@@ -32,14 +33,20 @@ npm install
 ## Running LiveHeartZ-Application
 
 To run LiveHeartZ-Application, follow these steps:
+
+1.Open a terminal window.
+2.Navigate to the LiveHeartZ-Application directory:
 cd LiveHeartZ-Application
 
-Start the backend server
+3.Start the backend server:
 cd Backend
 npm start
 
-In another terminal, start the frontend React application
-cd Frontend/blood_bank
+4.Open another terminal window (or tab).
+5.Navigate to the frontend React application directory:
+cd LiveHeartZ-Application/Frontend/blood_bank
+
+6.Start the frontend React application:
 npm run dev
 
 This will start the backend server on [http://localhost:5000](http://localhost:5000) and the frontend React application on [http://localhost:3000](http://localhost:3000).
