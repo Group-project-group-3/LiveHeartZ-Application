@@ -13,16 +13,8 @@ Before you begin, ensure you have met the following requirements:
 
 To install LiveHeartZ-Application, follow these steps:
 
-### Linux and macOS:
-`git clone https://github.com/yourusername/LiveHeartZ-Application.git`
-
-`cd LiveHeartZ-Application`
-
-`npm install`
-
-
-### Windows:
-`git clone https://github.com/yourusername/LiveHeartZ-Application.git`
+### Linux and macOS and Windows:
+`git clone [https://github.com/yourusername/LiveHeartZ-Application.git](https://github.com/Group-project-group-3/LiveHeartZ-Application.git)`
 
 `cd LiveHeartZ-Application`
 
