@@ -14,7 +14,6 @@ Before you begin, ensure you have met the following requirements:
 To install LiveHeartZ-Application, follow these steps:
 
 Linux and macOS:
-```bash
 git clone https://github.com/yourusername/LiveHeartZ-Application.git
 cd LiveHeartZ-Application
 npm install
@@ -43,13 +42,12 @@ In another terminal, start the frontend React application
 cd Frontend/blood_bank
 npm run dev
 
-
 This will start the backend server on [http://localhost:5000](http://localhost:5000) and the frontend React application on [http://localhost:3000](http://localhost:3000).
+
 
 ## Using LiveHeartZ-Application
 
 Now that your application is running, you can access the front end in a web browser at `http://localhost:3000`.
-
 The backend API can be accessed at `http://localhost:5000/api`.
 
 ## Contributing to LiveHeartZ-Application
@@ -70,5 +68,5 @@ If you have any questions, you can reach me at [nufla2017@gmail.com](mailto:nufl
 
 ## License
 
-This project uses the following license: [<license_name>](<link_to_license>).
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
