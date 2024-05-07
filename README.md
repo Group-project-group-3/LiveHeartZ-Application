@@ -14,15 +14,15 @@ Before you begin, ensure you have met the following requirements:
 To install LiveHeartZ-Application, follow these steps:
 
 ### Linux and macOS:
-git clone https://github.com/yourusername/LiveHeartZ-Application.git
-cd LiveHeartZ-Application
-npm install
+`git clone https://github.com/yourusername/LiveHeartZ-Application.git`
+`cd LiveHeartZ-Application`
+`npm install`
 
 
 ### Windows:
-git clone https://github.com/yourusername/LiveHeartZ-Application.git
-cd LiveHeartZ-Application
-npm install
+`git clone https://github.com/yourusername/LiveHeartZ-Application.git`
+`cd LiveHeartZ-Application`
+`npm install`
 
 ## Configuring MongoDB
 
@@ -36,18 +36,18 @@ To run LiveHeartZ-Application, follow these steps:
 
 1.Open a terminal window.
 2.Navigate to the LiveHeartZ-Application directory:
-cd LiveHeartZ-Application
+`cd LiveHeartZ-Application`
 
 3.Start the backend server:
-cd Backend
-npm start
+`cd Backend`
+`npm start`
 
 4.Open another terminal window (or tab).
 5.Navigate to the frontend React application directory:
-cd LiveHeartZ-Application/Frontend/blood_bank
+`cd LiveHeartZ-Application/Frontend/blood_bank`
 
 6.Start the frontend React application:
-npm run dev
+`npm run dev`
 
 This will start the backend server on [http://localhost:5000](http://localhost:5000) and the frontend React application on [http://localhost:3000](http://localhost:3000).
 
