@@ -9,7 +9,7 @@ Before you begin, ensure you have met the following requirements:
 * You have a [MongoDB](https://www.mongodb.com/) database running locally or remotely
 * You have npm installed (npm is distributed with Node.js - which means that when you download Node.js, you automatically get npm installed on your computer)
 
-## Installing LiveHeartZ-Application
+### Installing LiveHeartZ-Application
 
 To install LiveHeartZ-Application, follow these steps:
 
