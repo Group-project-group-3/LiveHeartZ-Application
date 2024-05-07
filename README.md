@@ -14,14 +14,16 @@ Before you begin, ensure you have met the following requirements:
 To install LiveHeartZ-Application, follow these steps:
 
 Linux and macOS:
-git clone https://github.com/yourusername/yourprojectname.git
+```bash
+git clone https://github.com/yourusername/LiveHeartZ-Application.git
 cd LiveHeartZ-Application
 npm install
 
 
 Windows:
-git clone https://github.com/yourusername/yourprojectname.git
-cd yourprojectname
+```bash
+git clone https://github.com/yourusername/LiveHeartZ-Application.git
+cd LiveHeartZ-Application
 npm install
 
 ## Configuring MongoDB
