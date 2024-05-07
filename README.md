@@ -9,28 +9,28 @@ Before you begin, ensure you have met the following requirements:
 * You have a [MongoDB](https://www.mongodb.com/) database running locally or remotely
 * You have npm installed (npm is distributed with Node.js - which means that when you download Node.js, you automatically get npm installed on your computer)
 
-### Installing LiveHeartZ-Application
+## Installing LiveHeartZ-Application
 
 To install LiveHeartZ-Application, follow these steps:
 
-Linux and macOS:
-```bash
+### Linux and macOS:
 git clone https://github.com/yourusername/LiveHeartZ-Application.git
 cd LiveHeartZ-Application
 npm install
 
-Windows:
+
+### Windows:
 git clone https://github.com/yourusername/LiveHeartZ-Application.git
 cd LiveHeartZ-Application
 npm install
 
-### Configuring MongoDB
+## Configuring MongoDB
 
 1. Make sure MongoDB is running on your machine or use a remote MongoDB server.
 2. Configure your MongoDB URI in the `index.js` file or as an environment variable:
    DB_URI=mongodb://yourMongoDBUriHere
 
-### Running LiveHeartZ-Application
+## Running LiveHeartZ-Application
 
 To run LiveHeartZ-Application, follow these steps:
 
@@ -52,12 +52,12 @@ npm run dev
 This will start the backend server on [http://localhost:5000](http://localhost:5000) and the frontend React application on [http://localhost:3000](http://localhost:3000).
 
 
-### Using LiveHeartZ-Application
+## Using LiveHeartZ-Application
 
 Now that your application is running, you can access the front end in a web browser at `http://localhost:3000`.
 The backend API can be accessed at `http://localhost:5000/api`.
 
-### Contributing to LiveHeartZ-Application
+## Contributing to LiveHeartZ-Application
 
 To contribute to LiveHeartZ-Application, follow these steps:
 
