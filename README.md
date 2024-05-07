@@ -38,12 +38,11 @@ To run LiveHeartZ-Application, follow these steps:
 cd LiveHeartZ-Application
 
 Start the backend server
-cd backend
+cd Backend
 npm start
 
 In another terminal, start the frontend React application
-cd frontend
-cd blood_bank
+cd Frontend/blood_bank
 npm run dev
 
 
