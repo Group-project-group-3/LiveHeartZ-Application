@@ -19,9 +19,7 @@ git clone https://github.com/yourusername/LiveHeartZ-Application.git
 cd LiveHeartZ-Application
 npm install
 
-
 Windows:
-```bash
 git clone https://github.com/yourusername/LiveHeartZ-Application.git
 cd LiveHeartZ-Application
 npm install
