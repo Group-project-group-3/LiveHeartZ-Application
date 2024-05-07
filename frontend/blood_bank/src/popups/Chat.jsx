@@ -119,9 +119,14 @@ export default function Chat(props) {
                     <div >
                         <textarea name="message" onChange={handleChnage} value={formData.message} placeholder='Enter Message Hear' cols="60" rows="5" className='border-2'></textarea>
                     </div>
-                    
-
                 </DialogContent>
+                 <DialogActions>
+                    <Button style={{ backgroundColor: '#BC005A', border: '2px solid white',color: 'white' }} onClick={sendMessage}>
+                        Send
+                    </Button>
+                </DialogActions>
+            </BootstrapDialog>
+        </React.Fragment>
         
     );  
 }
