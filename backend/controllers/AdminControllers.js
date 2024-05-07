@@ -22,3 +22,29 @@ export const createAdmin = async (req, res) => {
         res.status(500).json({ success: false, message: 'Server error' });
     }
 }
+export const adminLogin = async (req, res) => {
+    try {
+        const { email } = req.body;
+
+        const adminprofile = await AdminData.findOne({ email: email });
+        console.log(adminprofile);
+
+        if (adminprofile != null) {
+
+            const password = adminprofile.password;
+            const profile_validate = await bcrypt.compare(req.body.password, password);
+
+            if (profile_validate) {
+                res.status(200).json({ success: true, id: adminprofile._id });
+            } else {
+                res.status(201).json({ success: false, message: "Password not match" });
+            }
+        } else {
+
+            res.status(201).json({ success: false, message: `${email} No Account found` });
+        }
+    } catch (error) {
+        // console.error('Error:', error.message);
+        res.status(500).json({ success: false, message: 'Server error' });
+    }
+}
