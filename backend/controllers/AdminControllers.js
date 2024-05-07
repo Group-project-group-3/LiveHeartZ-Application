@@ -48,3 +48,12 @@ export const adminLogin = async (req, res) => {
         res.status(500).json({ success: false, message: 'Server error' });
     }
 }
+export const findById = async (req, res) => {
+    try {
+        const admin = await AdminData.findById(req.params.id);
+        res.status(200).json(admin);
+    } catch (error) {
+        // console.error('Error:', error.message);
+        res.status(500).json({ success: false, message: 'Server error' });
+    }
+}
