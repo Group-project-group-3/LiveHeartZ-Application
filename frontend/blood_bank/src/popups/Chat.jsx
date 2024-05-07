@@ -36,7 +36,7 @@ export default function Chat(props) {
     };
 
 
-
+    //setting up some state variables using the useState hook in a functional component.
     const [profile, setProfile] = useState({});
 
     const [notifications, setNotifications] = useState([]);
