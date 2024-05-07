@@ -103,6 +103,25 @@ export default function Chat(props) {
                 >
                     <CloseIcon />
                 </IconButton>
+
+                <DialogContent className='row-span-1 '>
+
+
+                    <div className='flex'>
+                        <div className='homepara w-[100px] h-[40px] mt-[5px]'><label >Sender : </label></div>
+                        <div className='w-full'><input type="text" name='sendername' className='border-2 w-full h-[40px]' onChange={handleChnage} value={formData.sendername}/></div>
+                    </div>
+                    <div className='flex'>
+                        <div className='homepara w-[100px] h-[40px] mt-[5px]'><label >Subject : </label></div>
+                        <div className='w-full'><input type="text" name='subject' className='border-2 w-full h-[40px]' onChange={handleChnage} value={formData.subject}/></div>
+                    </div>
+
+                    <div >
+                        <textarea name="message" onChange={handleChnage} value={formData.message} placeholder='Enter Message Hear' cols="60" rows="5" className='border-2'></textarea>
+                    </div>
+                    
+
+                </DialogContent>
         
     );  
 }
