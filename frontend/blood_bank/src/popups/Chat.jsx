@@ -49,6 +49,7 @@ export default function Chat(props) {
         sendername:''
         });
 
+    //Validate form data function
     const validateFormData = () => {
 
         const errors = {};
