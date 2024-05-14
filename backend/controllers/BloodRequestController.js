@@ -5,7 +5,7 @@ export const createBloodRequest = async (req, res) => {
 
     try {
 
-        const { patientname, email, mobile, othermsg, bloodgroup, gender, hospitalname, contactname, doctorname, datewhenneed, province, district, tandc } = req.body;
+        const { patientname, email, mobile, othermsg, bloodgroup, gender, hospitalname, contactname, doctorname, datewhenneed, province, district, nic, tandc } = req.body;
         const bloodRequest = new BloodRequest({
             patientname,
             doctorname,
@@ -19,6 +19,7 @@ export const createBloodRequest = async (req, res) => {
             province,
             district,
             mobile,
+            nic,
             tandc,
             verified: false
         });
