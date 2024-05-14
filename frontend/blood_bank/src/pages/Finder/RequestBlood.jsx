@@ -14,6 +14,7 @@ import Button from '@mui/material/Button';
 const RequestBlood = () => {
 
   const navigator = useNavigate();
+
   const [errors, setErrors] = useState({});
   const [districts, setDistricts] = useState([]);
   const [formData, setFormData] = useState({
@@ -22,6 +23,7 @@ const RequestBlood = () => {
     bloodgroup: 'Select',
     hospitalname: '',
     contactname: '',
+    nic: '',
     othermsg: '',
     email: '',
     datewhenneed: '',
@@ -31,13 +33,14 @@ const RequestBlood = () => {
     gender: 'Select'
 
   });
+
   const handleChnage = (e) => {
     const { value, name } = e.target;
     //console.log(value, name);
     setFormData({ ...formData, [name]: value });
 
-
   }
+
 
   const getDistrcts = (e) => {
 
@@ -49,6 +52,7 @@ const RequestBlood = () => {
     )
 
   };
+
   const validateFormData = () => {
 
     const errors = {};
@@ -64,7 +68,7 @@ const RequestBlood = () => {
     if (!formData.mobile) {
       errors.mobile = "Mobile is required"
     } else if (!/^\d{10}$/.test(formData.mobile)) {
-      errors.mobile = 'Mobile not valid';
+      errors.mobile = 'Mobile number must be 10 digits';
     }
     if (!formData.doctorname) {
       errors.doctorname = 'Doctor name is required';
@@ -74,7 +78,15 @@ const RequestBlood = () => {
     }
     if (!formData.datewhenneed.trim()) {
       errors.datewhenneed = 'Date when needed is required';
+    } else {
+      const currentDate = new Date();
+      const selectedDate = new Date(formData.datewhenneed);
+
+      if (selectedDate < currentDate) {
+        errors.datewhenneed = 'The date on which blood is needed must be today or later';
+      }
     }
+
     if (formData.bloodgroup.trim() === "Select") {
       errors.bloodgroup = 'BloodGroup is required';
     }
@@ -85,19 +97,39 @@ const RequestBlood = () => {
       errors.hospitalname = 'Hospital name is required';
     }
 
-    if (!formData.othermsg.trim()) {
-      errors.othermsg = 'Other msg is required';
-    }
+    // if (!formData.othermsg.trim()) {
+    //   errors.othermsg = 'Other msg is required';
+    // }
     if (formData.province.trim() === "Select") {
       errors.province = 'Province is required';
     }
     if (formData.district.trim() === "Select") {
       errors.district = 'District is required';
     }
+    if (!formData.nic.trim()) {
+      errors.nic = 'NIC number is required';
+    } else if (!/^[0-9]{9}[vV]$/.test(formData.nic) && !/^[0-9]{12}$/.test(formData.nic)) {
+      errors.nic = 'NIC number is invalid';
+    }
 
     setErrors(errors);
     return Object.keys(errors).length === 0;
   }
+
+
+  // const createBloodRequest = async () => {
+
+  //   try {
+  //     if (validateFormData()) {
+  //       axiosPost('finder/bloodrequest', JSON.stringify(formData));
+  //       alert("Succsessfully Requested");
+  //     }
+  //   } catch (error) {
+  //     alert("Request Fail");
+  //   }
+
+
+  // }
 
   const verifiBloodRequest = async () => {
     try {
@@ -118,13 +150,15 @@ const RequestBlood = () => {
 
   }
 
+
   return (
     <div>
       <div>
         <Header navLinks={navLinks} />
       </div>
+
       <div className='ml-[150px] mt-[20px] mb-[10px] font-bold formheading'>Patient Details</div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 pl-[150px] pr-[150px] mb-[20px] ">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 pl-[50px] pr-[50px] md:pl-[150px] md:pr-[150px] mb-[20px] ">
 
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-[5px] ">
@@ -164,7 +198,7 @@ const RequestBlood = () => {
             <option value="Select">Select</option>
             <option value='A-'>A-</option>
             <option value="A+">A+</option>
-            <option value="AB-">AB</option>
+            <option value="AB-">AB-</option>
             <option value="AB+">AB+</option>
             <option value="B-">B-</option>
             <option value="B+">B+</option>
@@ -238,7 +272,7 @@ const RequestBlood = () => {
       </div>
 
       <div className='ml-[150px] mt-[20px] mb-[10px] font-bold formheading'>Contact Details</div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 pl-[150px] pr-[150px] mb-[20px]">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 pl-[50px] pr-[50px] md:pl-[150px] md:pr-[150px] mb-[20px] ">
 
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-[5px]">
@@ -271,7 +305,7 @@ const RequestBlood = () => {
 
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-[5px] ">
-            Date When Need
+            Blood Needed Date
           </label>
           <input
             type="date"
@@ -298,7 +332,20 @@ const RequestBlood = () => {
           />
           {errors.email && <span className="text-red-500">{errors.email}</span>}
         </div>
-
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-[5px]">
+            NIC Number
+          </label>
+          <input
+            type="text"
+            name="nic"
+            value={formData.nic}
+            className="block w-full px-4 py-2 rounded-md border border-gray-300 focus:ring-blue-500 focus:border-blue-500 bg-slate-100"
+            required
+            onChange={handleChnage}
+          />
+          {errors.nic && <span className="text-red-500">{errors.nic}</span>}
+        </div>
 
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-[5px]">
@@ -318,19 +365,16 @@ const RequestBlood = () => {
       <div className='ml-[150px] mb-[25px]'>
         <Stack direction="row" spacing={2}>
 
-          <Button className='w-[200px] h-[40px]' style={{ backgroundColor: '#BC005A', border: '2px solid white',color: 'white' }} onClick={verifiBloodRequest}>
+          <Button className='w-[200px] h-[40px]' style={{ backgroundColor: '#BC005A', border: '2px solid white', color: 'white' }} onClick={verifiBloodRequest}>
             Request Blood
           </Button>
 
         </Stack>
       </div>
-      
-
       <div>
         <Footer navLinks1={socialLinks} navLinks2={contactData} />
       </div>
     </div>
-    
   )
 }
 
