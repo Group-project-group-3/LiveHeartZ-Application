@@ -175,7 +175,7 @@ const Register = () => {
 
 
       <div className='ml-[150px] mt-[20px] mb-[10px] font-bold formheading'>Login Details</div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 pl-[150px] pr-[150px] mb-[20px] ">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 pl-[50px] pr-[50px] md:pl-[150px] md:pr-[150px] mb-[20px] ">
 
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-[5px] ">
@@ -253,7 +253,7 @@ const Register = () => {
       </div>
 
       <div className='ml-[150px] mt-[20px] mb-[10px] font-bold formheading'>Donor Details</div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 pl-[150px] pr-[150px] mb-[20px]">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 pl-[50px] pr-[50px] md:pl-[150px] md:pr-[150px] mb-[20px] ">
 
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-[5px] ">
@@ -348,7 +348,7 @@ const Register = () => {
 
       </div>
       <div className='ml-[150px] mt-[20px] mb-[10px] font-bold formheading '>Contact Details</div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 pl-[150px] pr-[150px] mb-[20px] ">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 pl-[50px] pr-[50px] md:pl-[150px] md:pr-[150px] mb-[20px] ">
 
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-[5px] ">
