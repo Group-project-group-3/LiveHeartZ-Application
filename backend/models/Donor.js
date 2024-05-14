@@ -11,12 +11,15 @@ const DonorSchema = new mongoose.Schema({
     birthdate: { type: String },
     weight: { type: Number },
     lastdonationdate: { type: String },
+    nic: { type: String },
     zipcode: { type: String },
     province: { type: String },
     tandc: { type: Boolean },
     district: { type: String },
     verified: { type: Boolean }
+
 }
 
 )
+
 export default mongoose.model('Donor', DonorSchema);
