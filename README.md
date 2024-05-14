@@ -58,6 +58,7 @@ MongoDB Compass will attempt to connect to the MongoDB server using the provided
 To run LiveHeartZ-Application, follow these steps:
 
 1.Open a terminal window.
+
 2.Navigate to the LiveHeartZ-Application directory:
 
 `cd LiveHeartZ-Application`
