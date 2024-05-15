@@ -12,10 +12,11 @@ import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 
 
+
 const AdminDashboard = () => {
 
 
-  
+
 
     const location = useLocation();
     const searchParams = new URLSearchParams(location.search);
@@ -25,7 +26,7 @@ const AdminDashboard = () => {
 
         axiosGet(`donor/byid/${id}`)
 
-          
+
             .catch(error => {
 
                 console.error('Error fetching data:', error);
@@ -36,6 +37,7 @@ const AdminDashboard = () => {
             // Cleanup code goes here
         };
     }, []);
+
 
 
     return (
@@ -51,7 +53,7 @@ const AdminDashboard = () => {
                         adminNavLinks.map((item) =>
                             <Stack direction="col" spacing={2}>
                                 {
-                                    <Button className='w-[250px] h-[50px]' variant="outlined" style={{ backgroundColor: '#BC005A', border: '2px solid white',color:'white' }} component={Link} to={item.path} >{item.display}</Button>
+                                    <Button className='w-[250px] h-[50px]' variant="outlined" style={{ backgroundColor: '#BC005A', border: '2px solid white', color: 'white' }} component={Link} to={item.path} >{item.display}</Button>
                                 }
 
                             </Stack>
@@ -66,7 +68,7 @@ const AdminDashboard = () => {
                 </div>
             </div>
 
-            
+
 
             {/* <div className='flex justify-center items-center text-[28px] font-bold w-full h-[500px] bg-slate-300'>
 
