@@ -1,7 +1,10 @@
 import { Table } from 'antd'
 import React from 'react'
 import { useState, useEffect } from 'react';
-
+import Header from '../../components/common/Header';
+import Footer from '../../components/common/Footer';
+import { adminNavLinks } from '../../assets/data/HeaderData';
+import { socialLinks, contactData } from '../../assets/data/FooterData';
 import { axiosGet } from '../../AxiosOperations';
 import Spinner1 from '../../pages/spinners/Spinner1';
 
@@ -94,18 +97,27 @@ const AllRequests = () => {
 
 
   return (
-    <div className='grid grid-cols-1 p-[30px] '>
-      <center className='homepara font-bold text-[26px]'>Requests</center>
-      <div className='responsive-table  pt-[40px] pb-[40px] bg-slate-100 h-[70vh]'>
-        {
-          loading ? (<Spinner1 />) : (<div className='bg-slate-400 m-[50px]'>
-            <Table columns={columns} dataSource={donordata} />
-          </div>)
-        }
+    <div >
+      <div>
+        <Header navLinks={adminNavLinks} donorloged={true} />
+      </div>
+      <div className='grid grid-cols-1 p-[30px] '>
+        <center className='homepara font-bold text-[26px]'>Requests</center>
+        <div className='responsive-table  pt-[40px] pb-[40px] bg-slate-100 h-[110vh]'>
+          {
+            loading ? (<Spinner1 />) : (<div className='bg-slate-400 m-[50px]'>
+              <Table columns={columns} dataSource={donordata} />
+            </div>)
+          }
+
+        </div>
 
       </div>
-
+      <div>
+        <Footer navLinks1={socialLinks} navLinks2={contactData} />
+      </div>
     </div>
+
   )
 }
 
