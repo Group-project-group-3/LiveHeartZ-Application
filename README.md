@@ -1,6 +1,5 @@
 # LiveHeartZ-Application
 Blood Bank and Donation Management System
-A brief description of what this project does and who it's for
 
 ## Prerequisites
 
@@ -62,13 +61,13 @@ To run LiveHeartZ-Application, follow these steps:
 
 `cd LiveHeartZ-Application`
 
-3.Start the backend server:
+3.Navigate to the backend Server directory:
 
 `cd Backend`
 
 `npm install`
 
-4.Start the frontend React application:
+4.Start the backend application:
 
 `npm start`
 
