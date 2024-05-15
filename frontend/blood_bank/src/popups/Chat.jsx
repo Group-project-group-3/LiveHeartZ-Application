@@ -1,4 +1,3 @@
-
 import * as React from 'react';
 import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
@@ -86,7 +85,7 @@ export default function Chat(props) {
 
     return (
         <React.Fragment >
-            <Button variant="outlined" className='w-full' onClick={handleClickOpen}>
+            <Button variant="outlined" className='w-full' style={{ borderRadius: 4, alignItems: 'center', color: '#BC005A', border: '2px solid #BC005A' }} to={'/requestblood'} onClick={handleClickOpen}>
                 Chat
             </Button>
             <BootstrapDialog
@@ -107,7 +106,7 @@ export default function Chat(props) {
                         position: 'absolute',
                         right: 8,
                         top: 8,
-                        color:'red',
+                        color: 'red',
                     }}
                 >
                     <CloseIcon />
@@ -118,21 +117,21 @@ export default function Chat(props) {
 
                     <div className='flex'>
                         <div className='homepara w-[100px] h-[40px] mt-[5px]'><label >Sender : </label></div>
-                        <div className='w-full'><input type="text" name='sendername' className='border-2 w-full h-[40px]' onChange={handleChnage} value={formData.sendername}/></div>
+                        <div className='w-full'><input type="text" name='sendername' className='border-2 w-full h-[40px]' onChange={handleChnage} value={formData.sendername} /></div>
                     </div>
                     <div className='flex'>
                         <div className='homepara w-[100px] h-[40px] mt-[5px]'><label >Subject : </label></div>
-                        <div className='w-full'><input type="text" name='subject' className='border-2 w-full h-[40px]' onChange={handleChnage} value={formData.subject}/></div>
+                        <div className='w-full'><input type="text" name='subject' className='border-2 w-full h-[40px]' onChange={handleChnage} value={formData.subject} /></div>
                     </div>
 
                     <div >
                         <textarea name="message" onChange={handleChnage} value={formData.message} placeholder='Enter Message Hear' cols="60" rows="5" className='border-2'></textarea>
                     </div>
-                    
+
 
                 </DialogContent>
                 <DialogActions>
-                    <Button style={{ backgroundColor: '#BC005A', border: '2px solid white',color: 'white' }} onClick={sendMessage}>
+                    <Button style={{ backgroundColor: '#BC005A', border: '2px solid white', color: 'white' }} onClick={sendMessage}>
                         Send
                     </Button>
                 </DialogActions>
