@@ -13,6 +13,7 @@ const BloodRequestSchema = new mongoose.Schema({
     province: { type: String },
     district: { type: String },
     mobile: { type: Number },
+    nic: { type: String },
     verified: { type: Boolean }
 
 }

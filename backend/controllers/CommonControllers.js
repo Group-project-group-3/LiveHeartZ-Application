@@ -1,6 +1,7 @@
 import Donor from "../models/Donor.js";
 import BloodBank from "../models/BloodBank.js";
 
+
 export const countOfDonors = async (req, res) => {
 
     try {
@@ -60,7 +61,7 @@ export const bloodBankCheakAvailability = async (req, res) => {
                 { type: blood }
             ]
         });
-        
+
         if (availability.length != 0) {
             res.status(200).json({ available: true });
         } else {
@@ -73,6 +74,7 @@ export const bloodBankCheakAvailability = async (req, res) => {
 
     }
 }
+
 
 export const updateBloodBankCount = async (req, res) => {
 
@@ -95,3 +97,5 @@ export const updateBloodBankCount = async (req, res) => {
 
     }
 }
+
+

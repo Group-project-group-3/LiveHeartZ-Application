@@ -30,9 +30,9 @@ export const getReportCount = async (req, res) => {
         const reports = await Reports.aggregate([
             {
                 $group: {
-                    _id:"$email" ,
+                    _id: "$email",
                     count: { $sum: 1 },
-                  
+
                 }
             }
         ]);

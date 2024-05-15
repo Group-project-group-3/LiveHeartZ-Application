@@ -21,18 +21,44 @@ cd LiveHeartZ-Application
 npm install
 ```
 
-## Configuring MongoDB
+## Configuring MongoDB , MongoDB Compass Setup Instructions
 
-1. Make sure MongoDB is running on your machine or use a remote MongoDB server.
-2. Configure your MongoDB URI in the `index.js` file or as an environment variable:
+### 1. Install MongoDB Compass
 
-   DB_URI=mongodb://yourMongoDBUriHere
+If you haven't already installed MongoDB Compass, you can download it from the MongoDB website and install it on your computer.
+
+[Download MongoDB Compass](https://www.mongodb.com/try/download/compass)
+
+### 2. Open MongoDB Compass
+
+Once MongoDB Compass is installed, open the application on your computer.
+
+### 3. Connect to MongoDB
+
+- Launch MongoDB Compass and click on the "New Connection" button to create a new connection.
+
+- In the "New Connection" window:
+  - Paste the provided MongoDB URI into the "Connection String" field:
+    ```
+    mongodb+srv://nufla2017:Qy3CtKmGYrgLnTd1@cluster0.y4rjeoz.mongodb.net/LiveHeartz
+    ```
+
+  - You don't need to enter a username or password separately since they are already included in the URI.
+
+  - Optionally, enter a name for this connection in the "Name" field to identify it in MongoDB Compass.
+
+- Click on the "Connect" button to initiate the connection.
+
+### 4. Verify Connection
+
+MongoDB Compass will attempt to connect to the MongoDB server using the provided URI. If the connection is successful, you will see your MongoDB databases and collections listed in MongoDB Compass. You can then start interacting with your MongoDB databases using the GUI provided by MongoDB Compass.
 
 ## Running LiveHeartZ-Application
 
 To run LiveHeartZ-Application, follow these steps:
 
 1.Open a terminal window.
+
 2.Navigate to the LiveHeartZ-Application directory:
 
 `cd LiveHeartZ-Application`

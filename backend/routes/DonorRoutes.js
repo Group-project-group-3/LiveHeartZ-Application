@@ -1,5 +1,5 @@
 import express from "express";
-import { createDonor, getDonors, login, findById, getNotifications, setNotifications, getAllDonors, registerCreateOtp, registerVerifyOtp, setEmail, blodRequestCreateOtp, bloodRequestVerifyOtp, deleteDonor,getTotalDonorsCount,getDonorsByProvince } from '../controllers/DonorControllers.js';
+import { createDonor, getDonors, login, findById, getNotifications, setNotifications, getAllDonors, registerCreateOtp, registerVerifyOtp, setEmail, blodRequestCreateOtp, bloodRequestVerifyOtp, deleteDonor, getTotalDonorsCount, getDonorsByProvince } from '../controllers/DonorControllers.js';
 
 
 const router = express.Router();

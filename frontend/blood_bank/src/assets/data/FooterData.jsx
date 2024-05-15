@@ -2,6 +2,7 @@ import { RiLinkedinFill } from 'react-icons/ri';
 import { AiFillYoutube, AiFillGithub, AiOutlineInstagram } from 'react-icons/ai';
 
 const socialLinks = [
+
     {
         path: "https://www.youtube.com",
         icon: <AiFillYoutube className='group-hover:text-white w-5 h-5' />
@@ -18,9 +19,11 @@ const socialLinks = [
         path: "https://www.linkedin.com",
         icon: <RiLinkedinFill className='group-hover:text-white w-5 h-5' />
     },
+
 ];
 
 const contactData = [
+
     {
         display: '0753334172'
     },
@@ -31,11 +34,14 @@ const contactData = [
         display: 'LiveHeartz@yahoo.com'
     },
     {
-        display: 'No 25/6,Mannar Road,Puthiya salambaikulam,Vavuniya'
+        display: 'No 25/6,Mannar Road,Puthiya salambaigulam,Vavuniya '
     },
+
 ];
 
+
 const quickLink02 = [
+
     {
         path: "",
         display: 'temp'
@@ -52,9 +58,11 @@ const quickLink02 = [
         path: "",
         display: 'temp'
     },
+
 ];
 
 const quickLink03 = [
+
     {
         path: "",
         display: 'temp'
@@ -71,6 +79,7 @@ const quickLink03 = [
         path: "",
         display: 'temp'
     },
+
 ];
 
-export { socialLinks, contactData, quickLink02, quickLink03 };
+export { socialLinks, contactData, quickLink02,quickLink03 };

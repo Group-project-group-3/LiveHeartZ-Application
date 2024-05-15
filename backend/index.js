@@ -26,7 +26,7 @@ app.use('/report', ReportRoutes);
 
 const connectDB = async () => {
     try {
-        await mongoose.connect("mongodb://localhost:27017", {
+        await mongoose.connect("mongodb+srv://nufla2017:Qy3CtKmGYrgLnTd1@cluster0.y4rjeoz.mongodb.net/LiveHeartz", {
             useNewUrlParser: true,
             useUnifiedTopology: true,
 

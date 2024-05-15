@@ -21,7 +21,7 @@ let transporter = nodemailer.createTransport({
 
 export const createDonor = async (req, res) => {
     try {
-        const { fullname, email, mobile, password, bloodgroup, gender, birthdate, weight, lastdonationdate, zipcode, province, district, tandc } = req.body;
+        const { fullname, email, mobile, password, bloodgroup, gender, birthdate, weight, lastdonationdate, nic, zipcode, province, district, tandc } = req.body;
 
         const existingUser = await Donor.findOne({ email });
 
@@ -42,6 +42,7 @@ export const createDonor = async (req, res) => {
             birthdate,
             weight,
             lastdonationdate,
+            nic,
             zipcode,
             province,
             district,
@@ -230,9 +231,9 @@ export const login = async (req, res) => {
             const profile_validate = await bcrypt.compare(req.body.password, password) & donorprofile.verified == true;
 
             if (profile_validate) {
-                res.status(200).json({ success: true, id: donorprofile._id ,role:'donor'});
+                res.status(200).json({ success: true, id: donorprofile._id, role: 'donor' });
             } else {
-                res.status(201).json({ success: false, message: "Password not match" });
+                res.status(201).json({ success: false, message: "An incorrect password or email has been entered" });
             }
         } else {
             const adminprofile = await AdminData.findOne({ email: email });
@@ -240,11 +241,11 @@ export const login = async (req, res) => {
             const profile_validate = await bcrypt.compare(req.body.password, password);
 
             if (profile_validate) {
-                res.status(200).json({ success: true, id: adminprofile._id ,role:'admin'});
+                res.status(200).json({ success: true, id: adminprofile._id, role: 'admin' });
             } else {
-                res.status(201).json({ success: false, message: "Password not match" });
+                res.status(201).json({ success: false, message: "An incorrect password or email has been entered" });
             }
-            
+
         }
     } catch (error) {
         // console.error('Error:', error.message);
@@ -309,24 +310,36 @@ export const setEmail = async (req, res) => {
             from: "liveheartzbloodbank@gmail.com",
             to: reciver.email,
             subject: "Blood Request",
-            html:
-                `<div>
-
+            html: `
+            <div>
                 <h2>Patient Information</h2>
                 <ul>
-                    <li><strong>Patient Name:</strong>${data.patientname}</li>
-                    <li><strong>Doctor Name:</strong>${data.doctorname}</li>
-                    <li><strong>Blood Group:</strong>${data.bloodgroup}</li>
-                    <li><strong>Needed Date:</strong>${data.datewhenneed}</li>
-                    <li><strong>Hospital Name:</strong>${data.hospitalname}</li>
-                    <li><strong>Message Date:</strong>${data.othermsg}</li>
-                    <li><strong>Email:</strong>${data.email}</li>
-                    <li><strong>Mobile:</strong>${data.mobile}</li>
+                    <li><strong>Patient Name:</strong> ${data.patientname}</li>
+                    <li><strong>Blood Group:</strong> ${data.bloodgroup}</li>
+                    <li><strong>Needed Date:</strong> ${data.datewhenneed}</li>
+                    <li><strong>Hospital Name:</strong> ${data.hospitalname}</li>
+                    <li><strong>Message from Requester:</strong> ${data.othermsg}</li>
+                    <li><strong>Email:</strong> <span style="color: red;">${data.email}</span></li>
+                    <li><strong>Mobile:</strong> <span style="color: red;">${data.mobile}</span></li>
                 </ul>
-            
-                 <div/>`
+                <p>
+                    Dear Donor,
+                    <br><br>
+                    We kindly request your help in providing blood for the patient mentioned above. Your donation can save a life and make a significant difference.
+                    <br><br>
+                    You can donate your blood at the above-mentioned hospital or contact us for more information. You can also contact the requester through the provided email or phone number.
+                    <br><br>
+                    Your contribution is greatly appreciated.
+                    <br><br>
+                    Thank you for your support and generosity.
+                    <br><br>
+                    Sincerely,
+                    <br>
+                    Live Hearts Blood Bank Team
+                </p>
+            </div>`
+        };
 
-        }
 
         await transporter.sendMail(mailOptions);
         await emailsend.save();

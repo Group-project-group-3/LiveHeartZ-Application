@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const BloodBankSchema = new mongoose.Schema({
 
     type: { type: String },
-    count:{type:Number},
+    count: { type: Number },
 
 }
 

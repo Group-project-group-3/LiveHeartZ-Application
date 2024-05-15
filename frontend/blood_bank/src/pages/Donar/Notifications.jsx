@@ -13,7 +13,8 @@ const Notifications = () => {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const id = searchParams.get("id");
-  
+
+
   const [notifications, setNotifications] = useState([]);
 
   useEffect(() => {
@@ -49,7 +50,7 @@ const Notifications = () => {
             <span className='block'>{item.message}</span>
           )
         } */}
-        <Inbox/>
+        <Inbox />
       </div>
       <div>
         <Footer navLinks1={socialLinks} navLinks2={contactData} />
