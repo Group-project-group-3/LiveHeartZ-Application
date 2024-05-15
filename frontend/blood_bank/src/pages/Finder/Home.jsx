@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react'
 
 import { Link } from 'react-router-dom';
@@ -280,9 +281,8 @@ const Home = () => {
 
           <div className='text-center'>
             <h2 className='font-bold text-2xl mb-4'>REQUEST BLOOD</h2>
-            <p className='homepara text-sm'>Some quick example text to build on the card title</p>
-            <p className='homepara text-sm'>and make up the bulk of the card's content.</p>
-            <a href="#" className='homepara text-sm block mt-4'>Go somewhere</a>
+            <p className='homepara text-sm'>Calling upon the kindness of strangers, we appeal for the invaluable gift of blood to aid those battling illness and injury.</p>
+            {/* <a href="#" className='homepara text-sm block mt-4'>Go somewhere</a> */}
           </div>
           <div className='flex justify-center mt-6'>
             <Stack direction="row" spacing={2}>
@@ -296,9 +296,8 @@ const Home = () => {
           </div>
           <div className='text-center'>
             <h2 className='font-bold text-2xl mb-4'>FIND DONOR</h2>
-            <p className='homepara text-sm'>Some quick example text to build on the card title</p>
-            <p className='homepara text-sm'>and make up the bulk of the card's content.</p>
-            <a href="#" className='homepara text-sm block mt-4'>Go somewhere</a>
+            <p className='homepara text-sm'>Every donation of blood is a gift of life, a small act that can make a huge difference in someone's journey toward recovery.</p>
+            {/* <a href="#" className='homepara text-sm block mt-4'>Go somewhere</a> */}
           </div>
           <div className='flex justify-center mt-6'>
             <Stack direction="row" spacing={2}>
