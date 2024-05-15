@@ -67,15 +67,21 @@ To run LiveHeartZ-Application, follow these steps:
 
 `cd Backend`
 
+`npm install`
+
+4.Start the frontend React application:
+
 `npm start`
 
-4.Open another terminal window (or tab).
+5.Open another terminal window (or tab).
 
-5.Navigate to the frontend React application directory:
+6.Navigate to the frontend React application directory:
 
 `cd LiveHeartZ-Application/Frontend/blood_bank`
 
-6.Start the frontend React application:
+`npm install`
+
+7.Start the frontend React application:
 
 `npm run dev`
 
