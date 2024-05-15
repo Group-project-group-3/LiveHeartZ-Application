@@ -18,7 +18,6 @@ To install LiveHeartZ-Application, follow these steps:
 ```bash
 git clone https://github.com/yourusername/LiveHeartZ-Application.git
 cd LiveHeartZ-Application
-npm install
 ```
 
 ## Configuring MongoDB , MongoDB Compass Setup Instructions
