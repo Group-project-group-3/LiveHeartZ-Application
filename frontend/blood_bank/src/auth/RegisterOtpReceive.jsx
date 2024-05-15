@@ -5,36 +5,33 @@ import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 import { axiosPost } from '../AxiosOperations';
 import { useNavigate } from 'react-router-dom';
-
 const OtpReceive = () => {
 
-    const location = useLocation();
-    const searchParams = new URLSearchParams(location.search);
-    const formdata = searchParams.get("formdata");
-  
-    const [otp, setOtp] = useState(null);
-    var decodedFormData = JSON.parse(formdata);
-    const navigetor = useNavigate();
-  
-    const getOtp = (e) => {
-  
-      setOtp(e.target.value);
-  
-    }
-  
-    const registerDonor = async () => {
-  
-      try {
-  
-        await axiosPost('donor/register/otpreceive', { email: decodedFormData.email, otp: otp });
-        navigetor('/login');
-  
-      }
-      catch (error) {
-        alert(error.response.data.message)
-      }
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const formdata = searchParams.get("formdata");
+
+  const [otp, setOtp] = useState(null);
+  var decodedFormData = JSON.parse(formdata);
+
+  const navigetor = useNavigate();
+
+  const getOtp = (e) => {
+
+    setOtp(e.target.value);
+
+  }
+
+  const registerDonor = async () => {
+
+    try {
+      await axiosPost('donor/register/otpreceive', { email: decodedFormData.email, otp: otp });
+      navigetor('/login');
+    } catch (error) {
+      alert(error.response.data.message)
     }
   }
+
   return (
     <div className='flex justify-center items-center h-screen bg-stone-100 '>
 
@@ -56,9 +53,12 @@ const OtpReceive = () => {
             Send
           </Button></center>
         </div>
+
       </div>
+
+
     </div>
   )
-
+}
 
 export default OtpReceive
