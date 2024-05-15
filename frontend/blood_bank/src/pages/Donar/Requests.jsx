@@ -18,7 +18,9 @@ const Requests = () => {
   const searchParams = new URLSearchParams(location.search);
   const blood = searchParams.get("blood");
 
-   useEffect(() => {
+
+
+  useEffect(() => {
 
     axiosGet(`finder/requests/${blood}`)
 
@@ -96,9 +98,13 @@ const Requests = () => {
       dataIndex: 'district',
       key: 'district',
     }
+
+
+
   ];
 
-  
+
+
   return (
     <div >
       <div>
