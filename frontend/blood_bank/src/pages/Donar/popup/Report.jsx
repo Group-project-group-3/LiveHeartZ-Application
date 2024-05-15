@@ -29,7 +29,12 @@ export default function Report(props) {
     const handleClose = () => {
         setOpen(false);
     };
-    
+
+
+
+
+
+
     let [formData, setFormData] = useState({
         email: props.email,
         name: props.name,
@@ -52,32 +57,44 @@ export default function Report(props) {
     }
 
     const handleChnage = (e) => {
+
         const { value, name } = e.target;
         //console.log(value, name);
         setFormData({ ...formData, [name]: value });
+
+
     }
 
+
+
     const sendReport = () => {
+
         if (validateFormData) {
             axiosPost('report/setreport', JSON.stringify(formData));
             alert("Report Send Succsessfully");
 
             handleClose();
         }
+
+
+
+
     }
+
 
     return (
         <React.Fragment >
-            <Button variant="outlined" className='w-full ' color="error" onClick={handleClickOpen}>
+            <Button variant="outlined" className='w-full ' style={{ backgroundColor: '#BC005A', border: '2px solid white', color: 'white' }} onClick={handleClickOpen}>
                 REPORT
             </Button>
             <BootstrapDialog
                 onClose={handleClose}
                 aria-labelledby="customized-dialog-title"
                 open={open}
-                >
 
-        <DialogTitle sx={{ m: 0, p: 2 }} id="customized-dialog-title">
+
+            >
+                <DialogTitle sx={{ m: 0, p: 2 }} id="customized-dialog-title">
                     <div className='homepara font-bold text-red-600'>Report - {props.name}</div>
                 </DialogTitle>
                 <hr className='border-2 m-[15px]' />
@@ -110,7 +127,7 @@ export default function Report(props) {
                         />
                         </div>
                     </div>
-                         <div className='flex'>
+                    <div className='flex'>
                         <div className='homepara w-[100px] h-[40px] mt-[5px]'>
                         <label>Subject : </label>
                         </div>
@@ -141,14 +158,13 @@ export default function Report(props) {
                         ></textarea>
                         </div>
                     </div>
-                    </DialogContent>
-                
-                        <DialogActions>
-                        <Button variant="outlined" style={{ backgroundColor: '#BC005A', border: '2px solid white',color: 'white' }} onClick={sendReport} >SEND</Button>
-                        </DialogaActions>
+                </DialogContent>
 
-                            </BootstrapDialog>
-                        </React.Fragment>    
-                );
+                <DialogActions>
+                <Button variant="outlined" style={{ backgroundColor: '#BC005A', border: '2px solid white',color: 'white' }} onClick={sendReport} >SEND</Button>
+                   
+                </DialogActions>
+            </BootstrapDialog>
+        </React.Fragment>
+    );
 }
-
