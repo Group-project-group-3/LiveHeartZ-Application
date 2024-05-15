@@ -1,31 +1,25 @@
-import { Button, Table } from 'antd'
+import { Table } from 'antd'
 import React from 'react'
 import { useState, useEffect } from 'react';
+import Header from '../../components/common/Header';
+import Footer from '../../components/common/Footer';
+import { adminNavLinks } from '../../assets/data/HeaderData';
+import { socialLinks, contactData } from '../../assets/data/FooterData';
 import { axiosGet } from '../../AxiosOperations';
 import Spinner1 from '../../pages/spinners/Spinner1';
-import { WarningOutlined } from '@ant-design/icons';
 
-const Report = () => {
-const [reports, setReports] = useState([]);
-const [loading, setLoading] = useState(true);
+const Donor = () => {
 
-const deleteDonor = async (email) => {
-    
-    try {
-        await axiosGet(`donor/delete/${email}`);
-        alert("Succsessfully Delete Donor");
-      } catch (error) {
-  
-      }
-    }
+  const [donordata, setDonorData] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-        axiosGet('report/getreport')
+  useEffect(() => {
 
-        
+    axiosGet('donor/alldonors')
+
       .then(data => {
 
-        setReports(data.data);
+        setDonorData(data.data);
 
       }).then(setInterval(() => {
         setLoading(false);
@@ -35,47 +29,74 @@ const deleteDonor = async (email) => {
         console.error('Error fetching data:', error);
       });
 
-      return () => {
-        // Cleanup code goes here
-      };
-    }, [deleteDonor]);
 
-    const columns = [
+    return () => {
+      // Cleanup code goes here
+    };
+  }, []);
+
+  const columns = [
+    {
+      title: 'Name',
+      dataIndex: 'fullname',
+      key: 'count',
+    },
+    {
+      title: 'District',
+      dataIndex: 'district',
+      key: 'district',
+    },
+
+    {
+      title: 'Province',
+      dataIndex: 'province',
+      key: 'province',
+    },
+    {
+      title: 'Blood Type',
+      dataIndex: 'bloodgroup',
+      key: 'bloodgroup',
+    },
+    {
+      title: 'Last Donate',
+      dataIndex: 'lastdonationdate',
+      key: 'lastdonationdate',
+    },
+    {
+      title: 'Email',
+      dataIndex: 'email',
+      key: 'email',
+      render: (text) => <a href={`mailto:${text}`} style={{ color: 'blue', textDecoration: 'underline', cursor: 'pointer' }}>{text}</a>,
+    },
+    {
+      title: 'Mobile',
+      dataIndex: 'mobile',
+      key: 'mobile',
+    }
+
+
+
+  ];
+  return (
+    <div >
+      <div>
+        <Header navLinks={adminNavLinks} donorloged={true} />
+      </div>
+      <div className='grid grid-cols-1 p-[30px] '>
+        <center className='homepara font-bold text-[26px]'>Donars List</center>
         {
-            title: 'Donor Email',
-            dataIndex: '_id',
-            key: 'email',
-        },
-        {
-            title: 'Report Count',
-            dataIndex: 'count',
-            key: 'count',
-        },
-        {
-            key: 'Action',
-            title: 'Actions', 
-            render: (recode) => {
-                const tempData = JSON.stringify(recode);
-                const row = JSON.parse(tempData);
-        
-                return <>
-                <div key={recode.key} className='flex gap-7 '></div>
-                <Button  className='text-white' style={{ backgroundColor: '#BC005A', border: '2px solid white' }} onClick={() => deleteDonor(row._id)} >DELETE</Button>
-                </>
-            }
+          loading ? (<Spinner1 />) : (<div className='bg-slate-400 m-[50px]'>
+            <Table columns={columns} dataSource={donordata} />
+          </div>)
         }
-    ];
 
-    return (
-        <div className='grid grid-cols-1 p-[30px] '>
-             <center className='homepara font-bold text-[26px]'>Donor List</center>
-             {
-            loading ? (<Spinner1 />) : (<div className='bg-slate-400 m-[50px]'>
-            <Table columns={columns} dataSource={reports} />
-             </div>)
-            }     
-        </div>
-    )
+      </div>
+      <div>
+        <Footer navLinks1={socialLinks} navLinks2={contactData} />
+      </div>
+    </div>
+
+  )
 }
 
-export default Report
+export default Donor
